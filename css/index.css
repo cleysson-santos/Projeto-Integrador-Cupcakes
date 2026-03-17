@@ -56,9 +56,11 @@ header{
 .banner{
     text-align:center;
     margin-top: 4rem;
+    position: relative;
 }
 
 .banner img {
+    display: block;
     width: 100vw;
     height: 30dvh;
 }
@@ -75,13 +77,16 @@ header{
 }
 
 .banner button{
-    padding:10px 20px;
+    padding:0.625rem 1.25rem;
     border-radius:10px;
     font-size: 1.5rem;
     border:2px solid var(--rosa-escuro);
     background:linear-gradient(var(--rosa-claro),white);
     cursor:pointer;
-    margin-top:10px;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    transform: translate(-50%, -50%)
 }
 
 /* CATEGORIAS */

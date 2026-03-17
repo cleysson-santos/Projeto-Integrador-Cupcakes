@@ -1,13 +1,19 @@
 :root {
     --rosa-principal: #ff8ac0; 
     --rosa-escuro: #ff5fa2;
+    --rosa-medio: #cf97ae;
     --rosa-claro: #ffe3ef;
 }
 
+* {
+    font-family: "Iosevka Charon Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
     margin:0;
-    background: var(--rosa-claro);
+    background: var(--rosa-medio);
 }
 
 /* HEADER */
@@ -89,6 +95,10 @@ header{
     transform: translate(-50%, -50%)
 }
 
+.banner button:hover {
+    background: linear-gradient(var(--rosa-escuro), white)
+}
+
 /* CATEGORIAS */
 
 .categorias{
@@ -105,6 +115,10 @@ header{
     border:2px solid var(--rosa-escuro);
     background:linear-gradient(var(--rosa-claro),white);
     cursor:pointer;
+}
+
+.categorias button:hover {
+    background: linear-gradient(var(--rosa-escuro), white)
 }
 
 /* DESTAQUE */
@@ -146,6 +160,10 @@ header{
     border:2px solid var(--rosa-escuro);
     background:linear-gradient(var(--rosa-claro),white);
     cursor:pointer;
+}
+
+.card button:hover {
+    background: linear-gradient(var(--rosa-escuro), white)
 }
 
 /* MENU INFERIOR */

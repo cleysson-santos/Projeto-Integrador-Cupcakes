@@ -1,0 +1,158 @@
+:root {
+    --rosa-principal: #ff8ac0; 
+    --rosa-escuro: #ff5fa2;
+    --rosa-claro: #ffe3ef;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background: var(--rosa-claro);
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.2rem 0 .2rem;
+    background:white;
+    border-radius: 0 0 1.25rem 1.25rem;
+}
+
+.logo{
+    color:var(--rosa-principal);
+    font-weight:bold;
+    font-size:1.25rem;
+    margin-left: -4rem;
+}
+
+.logo img {
+    width: 8rem;
+    height: 4rem;
+}
+
+.search{
+    padding:.7rem;
+    width: 14rem;
+    border-radius:.375rem;
+    border:1px solid #ccc;
+}
+
+.cart{
+    color:#2d6cdf;
+    cursor:pointer;
+    font-size: 2rem;
+}
+
+/* BANNER */
+
+.banner{
+    text-align:center;
+    margin-top: 4rem;
+}
+
+.banner img {
+    width: 100vw;
+    height: 30dvh;
+}
+
+.banner h1{
+    color: var(--rosa-principal);
+    font-size:4rem;
+    margin:.625rem;
+}
+
+.banner p{
+    color:#4c78a8;
+    font-size: 1.5rem;
+}
+
+.banner button{
+    padding:10px 20px;
+    border-radius:10px;
+    font-size: 1.5rem;
+    border:2px solid var(--rosa-escuro);
+    background:linear-gradient(var(--rosa-claro),white);
+    cursor:pointer;
+    margin-top:10px;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+    display:flex;
+    justify-content:space-between;
+    gap:5px;
+    padding:20px;
+}
+
+.categorias button{
+    padding:1rem 3rem;
+    font-size: 1.5rem;
+    border-radius:10px;
+    border:2px solid var(--rosa-escuro);
+    background:linear-gradient(var(--rosa-claro),white);
+    cursor:pointer;
+}
+
+/* DESTAQUE */
+
+.destaque{
+    padding: 5rem 2rem;
+}
+
+.destaque h2{
+    color:#ff7ab5;
+    margin-bottom:20px;
+}
+
+/* CUPCAKES */
+
+.cupcakes{
+    display:flex;
+    justify-content:space-around;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    width:180px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.card button{
+    margin-top:8px;
+    padding:6px 16px;
+    border-radius:8px;
+    border:2px solid var(--rosa-escuro);
+    background:linear-gradient(var(--rosa-claro),white);
+    cursor:pointer;
+}
+
+/* MENU INFERIOR */
+
+.menu{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:white;
+    border-top:1px solid #ccc;
+    display:flex;
+    justify-content:space-around;
+    padding:10px;
+    font-size:20px;
+}

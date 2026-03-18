@@ -68,13 +68,13 @@ header{
 .banner img {
     display: block;
     width: 100vw;
-    height: 30dvh;
+    height: 50dvh;
 }
 
 .banner button{
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
     border-radius: 0.625rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
     border: none;
     background:var(--rosa-principal);
@@ -96,13 +96,15 @@ header{
     display:flex;
     justify-content:space-between;
     gap: 0.3125rem;
-    padding: 4rem 1.25rem;
+    padding: 2rem 1.25rem;
+    margin: 0 1rem;
     border-bottom: 2px solid;
 }
 
 .categorias button{
-    padding:1rem 3rem;
-    font-size: 1.5rem;
+    padding:2rem 2rem;
+    margin: 0;
+    font-size: 2rem;
     border-radius: 0.625rem;
     border:none;
     background:var(--rosa-claro);

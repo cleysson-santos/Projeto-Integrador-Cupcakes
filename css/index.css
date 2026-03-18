@@ -13,7 +13,7 @@
 
 body{
     margin:0;
-    background: var(--rosa-medio);
+    background: var(--rosa-principal);
 }
 
 /* HEADER */
@@ -71,23 +71,13 @@ header{
     height: 30dvh;
 }
 
-.banner h1{
-    color: var(--rosa-principal);
-    font-size:4rem;
-    margin:.625rem;
-}
-
-.banner p{
-    color:#4c78a8;
-    font-size: 1.5rem;
-}
-
 .banner button{
     padding: 0.625rem 1.25rem;
     border-radius: 0.625rem;
     font-size: 1.5rem;
-    border: 0.125rem solid var(--rosa-escuro);
-    background:linear-gradient(var(--rosa-claro),white);
+    color: white;
+    border: none;
+    background:var(--rosa-principal);
     cursor:pointer;
     position: absolute;
     left: 50%;
@@ -96,7 +86,8 @@ header{
 }
 
 .banner button:hover {
-    background: linear-gradient(var(--rosa-escuro), white)
+    transition: .2s;
+    background: var(--rosa-escuro);
 }
 
 /* CATEGORIAS */
@@ -105,20 +96,22 @@ header{
     display:flex;
     justify-content:space-between;
     gap: 0.3125rem;
-    padding: 1.25rem;
+    padding: 4rem 1.25rem;
+    border-bottom: 2px solid;
 }
 
 .categorias button{
     padding:1rem 3rem;
     font-size: 1.5rem;
     border-radius: 0.625rem;
-    border:2px solid var(--rosa-escuro);
-    background:linear-gradient(var(--rosa-claro),white);
+    border:none;
+    background:var(--rosa-claro);
     cursor:pointer;
 }
 
 .categorias button:hover {
-    background: linear-gradient(var(--rosa-escuro), white)
+    transition: .2s;
+    background: var(--rosa-escuro);
 }
 
 /* DESTAQUE */
@@ -129,6 +122,7 @@ header{
 
 .destaque h2{
     font-size: 3rem;
+    margin: 0;
     color:#070707;
     margin-bottom:1.25rem;
 }
@@ -140,37 +134,44 @@ header{
     grid-template-columns: repeat(2, 1fr);
     gap:1rem;
     padding: 2rem;
-    row-gap: 0;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .card{
     background:white;
-    padding:1.875rem;
+    padding: 1rem 1rem 0;
     border-radius:0.625rem;
     width:22.5rem;
-    height: 80%;
     text-align:center;
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: .2s;
 }
 
 .card img{
     width:100%;
-    height: 60%;
+    height: 70%;
     border-radius:0.5rem;
 }
 
 .card button{
-    font-size: 2.5rem;
-    padding:0.375rem 1rem;
+    font-size: 1.5rem;
+    color: white;
+    padding:1rem 3rem;
     border-radius:0.5rem;
-    border:2px solid var(--rosa-escuro);
-    background:linear-gradient(var(--rosa-claro),white);
+    border: none;
+    background:var(--rosa-principal);
     cursor:pointer;
 }
 
 .card button:hover {
-    background: linear-gradient(var(--rosa-escuro), white)
+    transition: .2s;
+    background: var(--rosa-escuro);
+}
+
+.card:hover{
+    transform: translateY(-5px);
 }
 
 /* MENU INFERIOR */

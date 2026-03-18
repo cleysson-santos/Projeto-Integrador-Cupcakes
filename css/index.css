@@ -122,9 +122,8 @@ header{
 
 .destaque h2{
     font-size: 3rem;
-    margin: 0;
+    margin: 0 0 1.25rem;
     color:#070707;
-    margin-bottom:1.25rem;
 }
 
 /* CUPCAKES */
@@ -179,11 +178,23 @@ header{
 .menu{
     position:fixed;
     bottom:0;
+    z-index: 1000;
     width:100%;
     background:white;
     border-top:1px solid #ccc;
     display:flex;
     justify-content:space-around;
-    padding:0.625rem;
+    padding:0.625rem 0;
     font-size:2.5rem;
+}
+
+.menu a {
+    color: var(--rosa-escuro);
+    padding: 0 6rem;
+    margin: 0;
+}
+
+.menu a:hover {
+    color: var(--rosa-claro);
+    background: var(--rosa-principal);
 }

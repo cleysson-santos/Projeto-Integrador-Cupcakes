@@ -76,7 +76,7 @@ header{
 }
 
 .banner button{
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
     border-radius: 0.625rem;
     font-size: 2rem;
     color: white;
@@ -84,7 +84,7 @@ header{
     background:var(--rosa-principal);
     cursor:pointer;
     position: absolute;
-    left: 50%;
+    left: 51%;
     top: 92%;
     transform: translate(-50%, -50%)
 }
@@ -140,7 +140,6 @@ header{
     gap:1rem;
     padding: 2rem;
     row-gap: 1rem;
-    margin-bottom: 2rem;
 }
 
 .card{
@@ -182,22 +181,20 @@ header{
 /* MENU INFERIOR */
 
 .menu{
-    position:fixed;
+    position:sticky;
     bottom:0;
-    z-index: 1000;
+    z-index: 0;
     width:100%;
     background:white;
     border-top:1px solid #ccc;
     display:flex;
     justify-content:space-around;
-    padding:0.625rem 0;
-    font-size:2.5rem;
+    padding:2rem 0;
+    font-size: 2.7rem;
 }
 
 .menu a {
     color: var(--rosa-escuro);
-    padding: 0 6rem;
-    margin: 0;
 }
 
 .menu a:hover {

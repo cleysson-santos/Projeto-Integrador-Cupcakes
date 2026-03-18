@@ -193,11 +193,17 @@ header{
     font-size: 2.7rem;
 }
 
-.menu a {
+.menu .menu-item {
     color: var(--rosa-escuro);
+    transition: 0.2s;
 }
 
-.menu a:hover {
+.menu-item.active{
+    color: var(--rosa-principal);
+    transform: scale(1.2);
+}
+
+.menu .menu-item:hover {
     color: var(--rosa-claro);
     background: var(--rosa-principal);
 }

@@ -27,7 +27,7 @@ header{
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.2rem 0 .2rem;
+    padding: .5rem 0 .2rem;
     background:white;
     border-radius: 0 0 1.25rem 1.25rem;
 }
@@ -35,26 +35,30 @@ header{
 .logo{
     color:var(--rosa-principal);
     font-weight:bold;
-    font-size:5rem;
-    margin-left: -4rem;
 }
 
 .logo img {
-    width: 8rem;
-    height: 4rem;
+    width: 12rem;
+    height: 7rem;
 }
 
 .search{
-    padding:.7rem;
+    padding: 1.3rem;
     width: 14rem;
     border-radius:.375rem;
     border:0.0625rem solid #ccc;
+    font-size: 1.5rem;
 }
 
 .cart{
     color:#2d6cdf;
     cursor:pointer;
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.cart:hover {
+    transition: .3s;
+    font-size: 4rem;
 }
 
 /* BANNER */

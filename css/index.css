@@ -91,7 +91,7 @@ header{
     background:var(--rosa-principal);
     cursor:pointer;
     position: absolute;
-    left: 52%;
+    left: 50%;
     top: 92%;
     transform: translate(-50%, -50%)
 }

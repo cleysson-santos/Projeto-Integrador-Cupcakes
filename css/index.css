@@ -50,15 +50,22 @@ header{
     font-size: 1.5rem;
 }
 
-.cart{
-    color:#2d6cdf;
-    cursor:pointer;
-    font-size: 3rem;
-}
-
 .cart:hover {
     transition: .3s;
     font-size: 4rem;
+}
+
+.menu-item.active{
+    font-size: 3rem;
+    color: var(--rosa-principal);
+    transform: scale(1.2);
+}
+
+.menu-item:hover {
+    color: var(--rosa-claro);
+    background: var(--rosa-principal);
+    transition: .3s;
+    font-size: 3rem;
 }
 
 /* BANNER */
@@ -196,14 +203,4 @@ header{
 .menu .menu-item {
     color: var(--rosa-escuro);
     transition: 0.2s;
-}
-
-.menu-item.active{
-    color: var(--rosa-principal);
-    transform: scale(1.2);
-}
-
-.menu .menu-item:hover {
-    color: var(--rosa-claro);
-    background: var(--rosa-principal);
 }

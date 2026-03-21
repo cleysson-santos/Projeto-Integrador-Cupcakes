@@ -32,11 +32,6 @@ header{
     border-radius: 0 0 1.25rem 1.25rem;
 }
 
-.logo{
-    color:var(--rosa-principal);
-    font-weight:bold;
-}
-
 .logo img {
     width: 12rem;
     height: 7rem;
@@ -79,7 +74,7 @@ header{
 .banner img {
     display: block;
     width: 100vw;
-    height: 50dvh;
+    height: 40dvh;
 }
 
 .banner button{

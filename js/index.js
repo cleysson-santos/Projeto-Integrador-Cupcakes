@@ -1,3 +1,5 @@
+// marcador de link
+
 (function(){
 const items = document.querySelectorAll('.menu-item');
 

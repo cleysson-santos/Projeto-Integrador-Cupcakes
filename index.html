@@ -3,63 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- imports -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Doce Encantado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/index.css">
+  <title>Document</title>
 </head>
-<body class="bg-pink-100 font-sans">
-
-  <!-- Header -->
-  <header class="flex items-center justify-between p-4 bg-white shadow">
-    <div class="w-10 h-10 rounded-full border"></div>
-    <div class="flex gap-4 text-pink-500 text-xl">
-      <span><i class="fa-solid fa-magnifying-glass"></i></span>
-      <span><i class="fa-solid fa-bars"></i></span>
+<body>
+  
+  <header class="header">
+    <div class="logo">
+      <img src="/assets/Logo2.png" alt="">
+    </div>
+    <div class="header-icons">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-bars"></i>
     </div>
   </header>
 
-  <!-- Banner -->
-  <section class="p-2">
-    <div class="bg-orange-200 rounded-xl p-4 flex items-center gap-3">
-      <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75" class="w-24 h-24 rounded-lg object-cover">
-      <div>
-        <h2 class="text-sm font-bold">Entrega de cupcakes</h2>
-        <p class="text-xs">Sabor e alegria direto na sua porta!</p>
-        <button class="mt-2 bg-white px-3 py-1 rounded text-xs font-semibold">Peça agora</button>
-      </div>
+  <section class="banner">
+    <div class="banner-box">
+      <img src="/assets/hero-banner.png">
     </div>
   </section>
 
-  <!-- Mais pedidos -->
-  <section class="bg-pink-200 p-4">
-    <h3 class="font-semibold mb-3">Mais pedidos</h3>
+  <section class="section-maisPedidos">
+    <h3 class="title">Mais pedidos</h3>
 
-    <div class="bg-white rounded-xl shadow p-3">
-      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="rounded-lg w-full h-40 object-cover">
+    <div class="card">
+      <img src="/assets/cupcake-chocolate-md.png">
 
-      <div class="flex justify-between items-center mt-3">
+      <div class="card-footer">
         <span>Chocolate</span>
-        <button class="bg-pink-400 text-white px-4 py-1 rounded">Comprar</button>
+        <button class="buy-btn">Comprar</button>
         <span>♡</span>
       </div>
     </div>
   </section>
 
-  <!-- Galeria -->
-  <section class="p-4">
-    <h3 class="font-semibold mb-3">Galeria de Fotos</h3>
+  <section class="gallery">
+    <h3 class="title">Galeria de Fotos</h3>
 
-    <div class="flex gap-4 overflow-x-auto">
-      <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52" class="w-40 h-40 object-cover rounded-xl">
-      <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e" class="w-40 h-40 object-cover rounded-xl">
+    <div class="gallery-container">
+      <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52">
+      <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e">
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-brown-500 text-white text-center py-3" style="background:#8B5E3C">
+  <footer>
     Feito por Cleysson Santos
   </footer>
 

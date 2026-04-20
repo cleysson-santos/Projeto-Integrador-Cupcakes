@@ -55,11 +55,21 @@ body {
     height: 193px;
 }
 
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    width: 320px;
+    height: 170px;
+    display: grid;
 
+}
 
 .card img {
     width: 300px;
     height: 100px;
+    border-radius: 5px;
 }
 
 .gallery {

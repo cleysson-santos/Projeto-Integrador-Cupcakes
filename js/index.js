@@ -53,6 +53,44 @@ function enableSwipe(trackId) {
 enableSwipe('bannerTrack');
 enableSwipe('pedidoTrack');
 
+// CRIAR DOTS
+function createDots(trackId, dotsId) {
+  const track = document.getElementById(trackId);
+  const dotsContainer = document.getElementById(dotsId);
+
+  dotsMap[trackId] = [];
+
+  for (let i = 0; i < track.children.length; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+
+    dot.addEventListener('click', () => {
+      positions[trackId] = i;
+      track.style.transform = `translateX(-${i * 100}%)`;
+      updateDots(trackId);
+    });
+
+    dotsContainer.appendChild(dot);
+    dotsMap[trackId].push(dot);
+  }
+
+  updateDots(trackId);
+
+}
+
+function updateDots(trackId) {
+  const dots = dotsMap[trackId];
+  if (!dots) return;
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === position[trackId]);
+  });
+}
+
+//INICIAR DOTS
+createDots('bannerTrack', 'bannerDots');
+createDots('pedidoTrack', 'pedidoDots');
+
 const items = document.querySelectorAll('.menu-item');
 
 items.forEach(item => {

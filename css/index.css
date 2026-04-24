@@ -26,6 +26,16 @@ body {
     border-radius: 0 0 20px 20px;
 }
 
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.header-icons {
+    color: var(--principal-pink);
+    font-size: 24px;
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
@@ -40,20 +50,30 @@ body {
     min-width: 100%;
 }
 
-.logo img{
-    width: 40px;
-    height: 40px;
-}
-
-.header-icons {
-    color: var(--principal-pink);
-    font-size: 24px;
-}
-
 .heroBanner img {
     margin-top: 10px;
     min-width: 100vw;
     height: 35vh;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.arrow.left { 
+    left: 5px; 
+}
+
+.arrow.right { 
+    right: 5px; 
 }
 
 .title {

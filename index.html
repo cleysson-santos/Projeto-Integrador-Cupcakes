@@ -27,6 +27,7 @@
   </header>
 
   <section class="heroBanner carousel">
+    
     <div class="carousel-track" id="bannerTrack">
       <div class="carousel-item">
         <div class="banner">
@@ -47,36 +48,64 @@
       <i class="fa-solid fa-angle-right"></i>
     </div>
 
-    <div class="dots" id="galleryDots">
+    <div class="dots" id="bannerDots">
       <i class="fa-solid fa-circle"></i>
     </div>
   </section>
   
   <h3 class="title">Mais pedidos</h3>
   
-  <section class="section-maisPedidos">
+  <section class="section-maisPedidos carousel">
 
-    <div class="card">
-      <img src="/assets/cupcake-chocolate-md.png">
-
-      <div class="card-footer">
-        <p class="title-product">Chocolate</p>
-        <div class="buttons">
-        <button class="buy-btn">Comprar</button>
-          <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
-          <button class="fav-btn-clicado"><i class="fa-solid fa-heart"></i></button>
+    <div class="carousel-track" id="pedidoTrack">
+      <div class="carousel-item">
+        <div class="card">
+          <img src="/assets/cupcake-chocolate-md.png">
+          
+          <div class="card-footer">
+            <p class="title-product">Chocolate</p>
+            <div class="buttons">
+              <button class="buy-btn">Comprar</button>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+              <button class="fav-btn-clicado"><i class="fa-solid fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card">
+            <img src="/assets/cupcake-doceleite-md.png">
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="arrow left">
+      <i class="fa-solid fa-angle-left"></i>
+    </div>
+    <div class="arrow right">
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+
+    <div class="dots" id="pedidoDots">
+      <i class="fa-solid fa-circle"></i>
     </div>
   </section>
 
   <h3 class="title">Galeria de Fotos</h3>
 
-  <section class="gallery">
-
-    <div class="gallery-container">
+  <section class="gallery carousel">
+    <div class="gallery-container carousel-item">
       <img src="/assets/cupcake-chocolate-sm.png">
+    </div>
+    <div class="gallery-container carousel-item">
       <img src="/assets/cupcake-doceleite-sm.png">
+    </div>
+
+    <div class="arrow left">
+      <i class="fa-solid fa-angle-left"></i>
+    </div>
+    <div class="arrow right">
+      <i class="fa-solid fa-angle-right"></i>
     </div>
   </section>
 

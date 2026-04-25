@@ -168,9 +168,7 @@ body {
     background-color: var(--bg-brown);
     width: 100vw;
     height: 165px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    display: flex;
     margin-bottom: 20px;
 }
 
@@ -179,7 +177,6 @@ body {
 }
 
 .gallery-container {
-    /* display: flex; */
     gap: 25px;
     overflow-x: auto;
 }

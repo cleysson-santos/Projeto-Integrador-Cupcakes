@@ -83,7 +83,7 @@ function updateDots(trackId) {
   if (!dots) return;
 
   dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === position[trackId]);
+    dot.classList.toggle('active', index === positions[trackId]);
   });
 }
 

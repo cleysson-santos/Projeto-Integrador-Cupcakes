@@ -103,7 +103,6 @@ body {
     width: 100vw;
     height: 193px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -169,9 +168,9 @@ body {
     background-color: var(--bg-brown);
     width: 100vw;
     height: 165px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     margin-bottom: 20px;
 }
 
@@ -180,7 +179,7 @@ body {
 }
 
 .gallery-container {
-    display: flex;
+    /* display: flex; */
     gap: 25px;
     overflow-x: auto;
 }

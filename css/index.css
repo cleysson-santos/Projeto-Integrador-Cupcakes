@@ -60,7 +60,7 @@ body {
 
 .heroBanner img {
     margin-top: 10px;
-    min-width: 100vw;
+    max-width: 100vw;
     height: 35vh;
 }
 

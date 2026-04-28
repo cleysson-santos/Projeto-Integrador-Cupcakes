@@ -97,15 +97,6 @@ function updateDots(trackId) {
 createDots('bannerTrack', 'bannerDots');
 createDots('pedidoTrack', 'pedidoDots');
 
-// INFINITO MAIS PEDIDOS
-const pedidoTrack = document.getElementById('pedidoInfinite');
-const pedidoItems = pedidoTrack.querySelectorAll('.gallery-item');
-
-function scrollPedidos(direction) {
-  const itemWidth = pedidoTrack.querySelector('.gallery-item').offsetWidth + 12;
-  pedidoTrack.scrollBy({ left: direction * itemWidth * 2, behavior: 'smooth' });
-}
-
 document.getElementById('pedidoPrev').addEventListener('click', () => {
   scrollPedidos(-1);
 });

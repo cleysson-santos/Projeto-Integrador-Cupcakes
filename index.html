@@ -16,7 +16,7 @@
 </head>
 <body>
   
-  <header class="header">
+  <header class="header scrolled">
     <div class="logo">
       <img src="/assets/Logo2.png" alt="">
     </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="arrow left">
-      <i class="fa-solid fa-angle-left"></i>
+      <i class="fa-solid fa-angle-left"></i> 
     </div>
     <div class="arrow right">
       <i class="fa-solid fa-angle-right"></i>
@@ -71,17 +71,19 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="carousel-item">
-          <div class="card">
-            <img src="/assets/cupcake-doceleite-md.png">
+      <div class="carousel-item">
+        <div class="card">
+          <img src="/assets/cupcake-doceleite-md.png">
 
-            <div class="card-footer">
+          <div class="card-footer">
             <p class="title-product">Doce de Leite</p>
             <div class="buttons">
               <button class="buy-btn">Comprar</button>
               <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
               <button class="fav-btn-clicado"><i class="fa-solid fa-heart"></i></button>
+            </div>
           </div>
         </div>
       </div>
@@ -102,11 +104,21 @@
   <h3 class="title">Galeria de Fotos</h3>
 
   <section class="gallery carousel">
-    <div class="gallery-container carousel-item">
-      <img src="/assets/cupcake-chocolate-sm.png">
-    </div>
-    <div class="gallery-container carousel-item">
-      <img src="/assets/cupcake-doceleite-sm.png">
+    <div class="carousel-track" id="galleryTrack">
+      <div class="carousel-item">
+        <img src="/assets/cupcake-chocolate-sm.png">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/assets/cupcake-doceleite-sm.png">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/assets/cupcake-redvelvet-sm.png">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/cupcake-baunilha-sm.png">
+      </div>
     </div>
 
     <div class="arrow left">

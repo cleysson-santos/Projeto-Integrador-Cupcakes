@@ -2,6 +2,10 @@
 
 (function(){
 
+window.addEventListener('scroll', () => {
+  document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10)
+});
+
 const positions = {};
 const dotsMap = {};
 
@@ -52,6 +56,7 @@ function enableSwipe(trackId) {
 // ATIVAR SWIPE NOS CARROSEIS
 enableSwipe('bannerTrack');
 enableSwipe('pedidoTrack');
+enableSwipe('galleryTrack');
 
 // CRIAR DOTS
 function createDots(trackId, dotsId) {

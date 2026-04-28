@@ -55,7 +55,7 @@ body {
 }
 
 .carousel-item {
-    /* display: grid; */
+    min-width: 100%;
 }
 
 .heroBanner img {
@@ -183,6 +183,8 @@ body {
     margin-bottom: 20px;
     padding: 15px;
 }
+
+
 
 .gallery img {
     width: 140px;

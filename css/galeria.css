@@ -50,12 +50,14 @@ body {
     display: flex;
     align-items: center;
     padding: 12px;
+    position: relative;
 }
 
 .top-bar .arrow {
     font-size: 24px;
     text-decoration: none;
     color: inherit;
+    position: absolute;
 }
 
 .top-bar h2 {

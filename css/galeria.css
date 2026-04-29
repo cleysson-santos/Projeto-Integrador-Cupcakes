@@ -9,7 +9,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -46,10 +45,55 @@ body {
 }
 
 .top-bar {
-    background-color: var(--bg-brown-dark);
+    background: #8B5E3C;
+    color: #000;
     display: flex;
+    align-items: center;
+    padding: 12px;
 }
 
-.arrow {
+.top-bar .arrow {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+}
 
+.top-bar h2 {
+    margin: 0 auto;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+}
+
+/* GALERIA */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+footer {
+    background: #8B5E3C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
 }

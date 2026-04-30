@@ -39,9 +39,18 @@ body {
     height: 40px;
 }
 
-.header-icons {
+.header-icons .btn-search{
     color: var(--principal-pink);
     font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.header-icons .btn-menu{
+    color: var(--principal-pink);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
 }
 
 .carousel {
@@ -69,12 +78,16 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.2);
+    background: rgba(223, 217, 217, 0.26);
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
     cursor: pointer;
     border-radius: 6px;
+}
+
+.arrow:hover {
+    background: rgba(223, 217, 217, 0.555);
 }
 
 .arrow.left { 

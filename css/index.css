@@ -92,14 +92,6 @@ body {
     margin-top: 8px;
 }
 
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ccc;
-    transition: 0.3s;
-}
-
 .title {
     font-family: "Kaushan Script", cursive;
     font-weight: 400;

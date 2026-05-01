@@ -19,30 +19,6 @@ const fecharBusca = input.addEventListener('blur', () => {
     });
 });
 
-// window.addEventListener('scroll', () => {
-//   document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10)
-// });
-
-
-// const positions = {};
-// const dotsMap = {};
-
-// function move (trackId, direction) {
-//   const track = document.getElementById(trackId);
-//   const total = track.children.length;
-  
-//   if (!positions[trackId]) positions[trackId] = 0;
-  
-//   positions[trackId] += direction;
-  
-//   if (positions[trackId] < 0) positions[trackId] = 0;
-//   if (positions[trackId] >= total) positions[trackId] = total - 1;
-  
-//   track.style.transform = `translateX(-${positions[trackId] * 100}%)`;
-  
-//   updateDots(trackId);
-// }
-
 // // SWIPE MOBILE
 
 // function enableSwipe(trackId) {
@@ -75,51 +51,5 @@ const fecharBusca = input.addEventListener('blur', () => {
 // enableSwipe('bannerTrack');
 // enableSwipe('pedidoTrack');
 // enableSwipe('galleryTrack');
-
-// // CRIAR DOTS
-// function createDots(trackId, dotsId) {
-//   const track = document.getElementById(trackId);
-//   const dotsContainer = document.getElementById(dotsId);
-  
-//   dotsMap[trackId] = [];
-  
-//   for (let i = 0; i < track.children.length; i++) {
-//     const dot = document.createElement('div');
-//     dot.classList.add('dot');
-    
-//     dot.addEventListener('click', () => {
-//       positions[trackId] = i;
-//       track.style.transform = `translateX(-${i * 100}%)`;
-//       updateDots(trackId);
-//     });
-    
-//     dotsContainer.appendChild(dot);
-//     dotsMap[trackId].push(dot);
-//   }
-  
-//   updateDots(trackId);
-  
-// }
-
-// function updateDots(trackId) {
-//   const dots = dotsMap[trackId];
-//   if (!dots) return;
-  
-//   dots.forEach((dot, index) => {
-//     dot.classList.toggle('active', index === positions[trackId]);
-//   });
-// }
-
-// //INICIAR DOTS
-// createDots('bannerTrack', 'bannerDots');
-// createDots('pedidoTrack', 'pedidoDots');
-
-// document.getElementById('pedidoPrev').addEventListener('click', () => {
-//   scrollPedidos(-1);
-// });
-
-// document.getElementById('pedidoNext').addEventListener('click', () => {
-//   scrollPedidos(1);
-// });
 
 // })();

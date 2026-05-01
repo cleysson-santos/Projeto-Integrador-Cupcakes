@@ -39,18 +39,27 @@ body {
     height: 40px;
 }
 
-.header-icons .btn-search{
+.header-icons #btn-search{
     color: var(--principal-pink);
     font-size: 24px;
     border: none;
     cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+    background-color: inherit;
 }
 
-.header-icons .btn-menu{
+.header-icons #btn-menu{
     color: var(--principal-pink);
     font-size: 24px;
     border: none;
     cursor: pointer;
+    padding: 0;
+    background-color: inherit;
+}
+
+#searchForm {
+    display: none;
 }
 
 .carousel {

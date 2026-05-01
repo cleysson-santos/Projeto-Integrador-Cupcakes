@@ -2,6 +2,23 @@
 
 // (function(){
 
+const input = document.getElementById('search-input');
+
+const abrirBusca = document.getElementById('btn-search').addEventListener('click', function() {
+    let form = document.getElementById('searchForm');
+
+    form.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+    input.focus();
+});
+
+const fecharBusca = input.addEventListener('blur', () => {
+    const form = document.getElementById('searchForm');
+
+    setTimeout(() => {
+        form.style.display = 'none';
+    });
+});
+
 // window.addEventListener('scroll', () => {
 //   document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10)
 // });

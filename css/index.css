@@ -39,15 +39,35 @@ body {
     height: 40px;
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
 .header-icons #btn-search{
     color: var(--principal-pink);
     font-size: 24px;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 5px;
     margin-right: 10px;
     background-color: inherit;
 }
+
+.header-icons #search-input {
+    width: 0;
+    border: none;
+    border-bottom: 1px solid var(--principal-pink);
+    outline: none;
+    padding: 5px;
+}
+
+.header-icons #search-input:focus {
+    transition: all .5s linear;
+    width: 200px;
+}
+
 
 .header-icons #btn-menu{
     color: var(--principal-pink);
@@ -56,10 +76,6 @@ body {
     cursor: pointer;
     padding: 0;
     background-color: inherit;
-}
-
-#searchForm {
-    display: none;
 }
 
 .carousel {

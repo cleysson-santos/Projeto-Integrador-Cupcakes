@@ -6,6 +6,9 @@ const input = document.getElementById('searchForm');
 const lupa = document.getElementById('btn-search');
 const menu = document.getElementById('btn-menu');
 const searchInputField = document.getElementById('search-input');
+const btnMenu = document.getElementById('btn-menu');
+const menuModal = document.getElementById('menuModal');
+const closeMenu = document.getElementById('closeMenu');
 
 lupa.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -36,6 +39,27 @@ document.addEventListener('keydown', (event) => {
         closeSearch();
     }
 });
+
+
+
+btnMenu.addEventListener('click', () => {
+    menuModal.classList.add('active');
+    btnMenu.style.display = 'none';
+});
+
+closeMenu.addEventListener('click', () => {
+    menuModal.classList.remove('active');
+    btnMenu.style.display = 'block';
+});
+
+menuModal.addEventListener('click', (e) => {
+    if (e.target === menuModal) {
+        menuModal.classList.remove('active');
+    }
+});
+
+console.log(document.getElementById('btn-menu'));
+
 
 // // SWIPE MOBILE
 

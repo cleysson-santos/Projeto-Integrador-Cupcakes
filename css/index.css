@@ -39,6 +39,18 @@ body {
     height: 40px;
 }
 
+#searchForm {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+#searchForm.active {
+    width: 250px;
+    opacity: 1;
+}
+
 .header-icons {
     display: flex;
     align-items: center;
@@ -53,6 +65,14 @@ body {
     padding: 5px;
     margin-right: 10px;
     background-color: inherit;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+#btn-search.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .header-icons #search-input {
@@ -67,7 +87,6 @@ body {
     transition: all .5s linear;
     width: 200px;
 }
-
 
 .header-icons #btn-menu{
     color: var(--principal-pink);

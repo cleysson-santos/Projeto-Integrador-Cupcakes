@@ -1,22 +1,40 @@
 // // marcador de link
 
-// (function(){
+ (function(){
 
-const input = document.getElementById('search-input');
+const input = document.getElementById('searchForm');
+const lupa = document.getElementById('btn-search');
+const menu = document.getElementById('btn-menu');
+const searchInputField = document.getElementById('search-input');
 
-const abrirBusca = document.getElementById('btn-search').addEventListener('click', function() {
-    let form = document.getElementById('searchForm');
-
-    form.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
-    input.focus();
-});
-
-const fecharBusca = input.addEventListener('blur', () => {
-    const form = document.getElementById('searchForm');
+lupa.addEventListener('click', (event) => {
+    event.stopPropagation();
+    input.classList.add('active');
+    lupa.classList.add('hidden');
 
     setTimeout(() => {
-        form.style.display = 'none';
-    });
+        searchInputField.focus();
+    }, 50);
+});
+
+function closeSearch() {
+    console.log('Fechando busca')
+    input.classList.remove('active');
+    lupa.classList.remove('hidden');
+}
+
+document.addEventListener('click', (event) => {
+    const clicouFora = !input.contains(event.target) && !lupa.contains(event.target);
+    
+    if (input.classList.contains('active') && clicouFora && searchInputField.value.trim() === '') {
+        closeSearch();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && input.classList.contains('active')) {
+        closeSearch();
+    }
 });
 
 // // SWIPE MOBILE
@@ -52,4 +70,4 @@ const fecharBusca = input.addEventListener('blur', () => {
 // enableSwipe('pedidoTrack');
 // enableSwipe('galleryTrack');
 
-// })();
+ })();

@@ -9,6 +9,7 @@ const searchInputField = document.getElementById('search-input');
 const btnMenu = document.getElementById('btn-menu');
 const menuModal = document.getElementById('menuModal');
 const closeMenu = document.getElementById('closeMenu');
+const currentPage = window.location.pathname.split("/").pop().replace('.html', '');
 
 lupa.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -58,7 +59,16 @@ menuModal.addEventListener('click', (e) => {
     }
 });
 
-console.log(document.getElementById('btn-menu'));
+if (currentPage === '') {
+    currentPage = 'index';
+}
+
+document.querySelectorAll('.menu-content a').forEach(link => {
+
+    if(link.dataset.page === currentPage) {
+        link.classList.add('active');
+    }
+});
 
 
 // // SWIPE MOBILE

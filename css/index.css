@@ -116,19 +116,33 @@ body {
     width: 280px;
     height: 100vh;
     background: #fff;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     animation: slideIn .3s ease;
 }
 
-.menu-content a {
+.item-modal {
     text-decoration: none;
     color: #333;
     font-size: 18px;
     font-weight: 600;
+    display: block;
+    transition: .3s;
+    padding: 12px;
+    border-radius: 8px;
 }
+
+.item-modal:hover,
+.item-modal.active {
+    background-color: var(--principal-pink);
+    color: white;
+}
+
+.item-modal {
+    font-family: "Kaushan Script", cursive;
+    padding: 10px;
+}
+
 
 .close-menu {
     align-self: flex-end;

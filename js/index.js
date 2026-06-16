@@ -41,8 +41,6 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-
-
 btnMenu.addEventListener('click', () => {
     menuModal.classList.add('active');
     btnMenu.style.display = 'none';
@@ -71,37 +69,5 @@ document.querySelectorAll('.menu-content a').forEach(link => {
 });
 
 
-// // SWIPE MOBILE
-
-// function enableSwipe(trackId) {
-//   const track = document.getElementById(trackId);
-//   let startX = 0;
-//   let endX = 0;
-  
-//   track.addEventListener('touchstart', (e) => {
-//     startX = e.touches[0].clientX;
-//   });
-  
-//   track.addEventListener('touchmove', (e) => {
-//     endX = e.touches[0].clientX;
-//   });
-  
-//   track.addEventListener('touchend', () => {
-//     const diff = startX - endX;
-    
-//     if (Math.abs(diff) > 50) {
-//       if (diff > 0) {
-//         move(trackId, 1);
-//       } else {
-//         move(trackId, -1);
-//       }
-//     }
-//   });
-// }
-
-// // ATIVAR SWIPE NOS CARROSEIS
-// enableSwipe('bannerTrack');
-// enableSwipe('pedidoTrack');
-// enableSwipe('galleryTrack');
 
  })();

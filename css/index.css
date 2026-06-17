@@ -185,8 +185,18 @@ body {
     transform: scale(1);
 }
 
+.heroBanner .carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+#bannerTrack {
+    display: flex;
+    gap: 0;
+    transition: transform .4s ease;
+}
+
 .heroBanner img {
-    margin-top: 10px;
     width: 100%;
     display: block;
     height: 35vh;
@@ -332,15 +342,13 @@ body {
 .gallery-track {
     display: flex;
     gap: 12px;
-    overflow-x: auto;
     transition: transform .4s ease;
     padding-bottom: 10px;
 }
 
-.gallery-track::-webkit-scrollbar { display: none; }
-
 .gallery-item {
     flex: 0 0 calc(50% - 6px);
+    flex-shrink: 0;
 }
 
 .gallery-item img {

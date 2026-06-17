@@ -166,7 +166,7 @@ pedidoPrev.addEventListener('click', () => {
     updatePedidos();
 })
 
-// SWIPE
+// SWIPE mais pedidos
 
 let pedidoStartX = 0;
 
@@ -205,7 +205,8 @@ function updateGallery() {
 galleryNext.addEventListener('click', () => {
     galleryIndex++;
 
-    if (galleryIndex > galleryItems.length - 2) galleryIndex = 0;
+    if (galleryIndex > galleryItems.length - 2) 
+        galleryIndex = 0;
 
     updateGallery();
 });
@@ -213,7 +214,8 @@ galleryNext.addEventListener('click', () => {
 galleryPrev.addEventListener('click', () => {
     galleryIndex--;
 
-    if (galleryIndex < 0) galleryIndex = galleryItems.length - 2;
+    if (galleryIndex < 0) 
+        galleryIndex = galleryItems.length - 2;
 
     updateGallery();
 })
@@ -234,5 +236,6 @@ galleryTrack.addEventListener('touchend', e => {
     if (diff < -50) galleryPrev.click();
 });
 
+window.addEventListener('resize', updateGallery);
 
 })();

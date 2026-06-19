@@ -198,8 +198,7 @@ body {
 
 .heroBanner img {
     width: 100%;
-    display: block;
-    height: 35vh;
+    height: 30vh;
     object-fit: cover;
 }
 

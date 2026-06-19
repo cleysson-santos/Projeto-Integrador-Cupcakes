@@ -386,8 +386,17 @@ footer {
         height: 48px;
     }
 
-    .navBar {
+    .header .navBar {
         display: flex;
+        padding: 10px;
+    }
+
+    .header .navBar a {
+        text-decoration: none;
+        color: var(--principal-pink);
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
     }
 
     #searchForm {

@@ -30,6 +30,10 @@ body {
     transition: box-shadow 0.3s;
 }
 
+.header .navBar {
+    display: none;
+}
+
 .header.scrolled {
     box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
 }
@@ -202,6 +206,10 @@ body {
     object-fit: cover;
 }
 
+.heroBanner .tablet {
+    display: none;
+}
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -372,3 +380,32 @@ footer {
     margin-top: 10px;
 }
 
+@media (min-width: 768px) {
+   .logo img{
+        width: 48px;
+        height: 48px;
+    }
+
+    .navBar {
+        display: flex;
+    }
+
+    #searchForm {
+        width: 100px;
+
+    }
+
+    #search-input {
+        width: 300px;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    #btn-menu{
+        display: none;
+    }
+}

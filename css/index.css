@@ -74,6 +74,10 @@ body {
     visibility: visible;
 }
 
+.header-icons #btn-carrinho {
+    display: none;
+}
+
 #btn-search.hidden {
     opacity: 0;
     visibility: hidden;
@@ -399,12 +403,12 @@ footer {
         padding: 20px;
     }
 
-    #searchForm {
-        width: 100px;
+    #carrinho {
+        padding: 0;
     }
 
-    #search-input {
-        width: 300px;
+    #searchForm {
+        width: 100px;
     }
 
     .header-icons {
@@ -413,6 +417,18 @@ footer {
         overflow: hidden;
     }
     
+    .header-icons #btn-carrinho {
+        display: flex;
+        color: var(--principal-pink);
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #btn-carrinho a {
+        color: var(--principal-pink);
+    }
+
     #btn-menu{
         display: none;
     }

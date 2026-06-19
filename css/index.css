@@ -200,13 +200,13 @@ body {
     transition: transform .4s ease;
 }
 
-.heroBanner img {
+.img-mobile {
     width: 100%;
     height: 30vh;
     object-fit: cover;
 }
 
-.heroBanner .tablet {
+.img-tablet {
     display: none;
 }
 
@@ -401,7 +401,6 @@ footer {
 
     #searchForm {
         width: 100px;
-
     }
 
     #search-input {
@@ -416,5 +415,16 @@ footer {
     
     #btn-menu{
         display: none;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-tablet {
+        display: block;
+        width: 100%;
+        height: 45vh;
+        object-fit: cover;
     }
 }

@@ -179,7 +179,6 @@ body {
 .gallery-track {
     display: flex;
     transition: transform 0.4s ease;
-    gap: 12px;
 }
 
 .section-maisPedidos .carousel-item {
@@ -202,6 +201,10 @@ body {
     display: flex;
     gap: 0;
     transition: transform .4s ease;
+}
+
+.banner {
+    width: 100%;
 }
 
 .img-mobile {
@@ -269,7 +272,6 @@ body {
 .section-maisPedidos .carousel-track {
     display: flex;
     align-items: center;
-    gap: 12px;
     transition: transform .4s ease;
 }
 

@@ -568,6 +568,9 @@ footer {
 
 @media (min-width: 1024px){
     
+    #btn-search {
+        display: none;
+    }
     
     /* heroBanner */
     .img-mobile {

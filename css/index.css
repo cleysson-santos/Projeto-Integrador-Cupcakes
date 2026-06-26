@@ -221,7 +221,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(223, 217, 217, 0.26);
+    background: rgba(153, 152, 152, 0.26);
     color: #4b4a4a;
     border: none;
     padding: 5px 5px;
@@ -230,7 +230,7 @@ body {
 }
 
 .arrow:hover {
-    background: rgba(223, 217, 217, 0.555);
+    background: rgba(66, 66, 66, 0.555);
 }
 
 .arrow.left { 
@@ -239,13 +239,6 @@ body {
 
 .arrow.right { 
     right: 5px; 
-}
-
-.dots {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 8px;
 }
 
 .title {
@@ -467,6 +460,16 @@ footer {
 
     .banner {
         width: 100%;
+    }
+
+    .arrow.left { 
+        left: 20px;
+        font-size: 20px; 
+    }
+
+    .arrow.right { 
+        right: 20px;
+        font-size: 20px; 
     }
 
 

@@ -537,4 +537,21 @@ footer {
         align-items: center;
         justify-content: center;
     }
+
+    /* SECTION GALERIA */
+
+    .gallery {
+        height: 164px;
+        width: 100%;
+    }
+
+    .gallery-item {
+        flex: 1;
+    }
+
+    .gallery-item img {
+        width: 130px;
+        height: 130px;
+    }
+
 }

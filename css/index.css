@@ -382,7 +382,7 @@ footer {
 
 /* TABLET */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1026px) {
    .logo img{
         width: 48px;
         height: 48px;
@@ -552,6 +552,27 @@ footer {
     .gallery-item img {
         width: 130px;
         height: 130px;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px){
+    
+    
+    /* heroBanner */
+    .img-mobile {
+        display: none;
+    }
+
+    .img-tablet {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        width: 100%;
     }
 
 }

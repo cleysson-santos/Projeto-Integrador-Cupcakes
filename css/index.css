@@ -47,7 +47,17 @@ body {
 }
 
 .logo h1 {
-    
+    color: var(--principal-pink);
+}
+
+.logo span {
+    color: var(--bg-brown);
+}
+
+.logo h1, span {
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #searchForm {

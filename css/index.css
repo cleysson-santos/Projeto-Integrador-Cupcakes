@@ -217,6 +217,10 @@ body {
     display: none;
 }
 
+.img-desktop {
+    display: none;
+}
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -440,6 +444,10 @@ footer {
     .img-tablet {
         display: block;
         width: 100%;
+    }
+
+    .img-desktop {
+        display: none;
     }
 
     .heroBanner {

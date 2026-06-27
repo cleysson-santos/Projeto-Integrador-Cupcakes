@@ -190,14 +190,40 @@ body {
     margin-bottom:12px;
 }
 
-.filters label{
-    display:block;
-    margin-bottom:10px;
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    margin-left: 20px;
 }
 
-.filters input{
-    accent-color:var(--principal-pink);
+.checkbox input{
+    display:none;
 }
+
+.checkmark{
+    width:20px;
+    height:20px;
+    border:2px solid var(--principal-pink);
+    border-radius:4px;
+    background:#fff;
+    position:relative;
+}
+
+.checkbox input:checked + .checkmark{
+    background:var(--principal-pink);
+}
+
+.checkbox input:checked + .checkmark::after{
+    content:"✓";
+    color:#fff;
+    position:absolute;
+    left:4px;
+    top:-1px;
+    font-size:14px;
+}
+
 
 /* PRODUTOS */
 

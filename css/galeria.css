@@ -301,3 +301,39 @@ footer {
     }
     
 }
+
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #searchForm {
+        width: 250px;
+        opacity: 1;
+    }
+    
+    .header-icons #search-input {
+        display: block;
+        width: 200px;
+    }
+
+    #btn-search {
+        display: none;
+    }
+
+    .header-icons #btn-carrinho {
+        background-color: inherit;
+    }
+
+    .header .btn-menu {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}

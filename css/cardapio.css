@@ -261,6 +261,10 @@ body {
     text-align: center;
 }
 
+.description {
+    display: none;
+}
+
 .bottom span {
     font-family: inherit;
     font-weight: 500;
@@ -357,23 +361,48 @@ body {
     }
 
     .filters{
-        background:var(--brown);
-        color:white;
+        background-color: var(--bg-brown);
+        padding:20px;
+    }
+
+    .filters h3{
+        font-family:"Kaushan Script",cursive;
+        margin-bottom:12px;
+    }
+
+    .checkbox{
         display:flex;
         align-items:center;
-        gap:15px;
-        padding:15px;
-        overflow:auto;
-    }
-
-    .filters button{
-        background:none;
-        border:none;
-        color:var(--bg-pink-light);
+        gap:10px;
         cursor:pointer;
-        white-space:nowrap;
+        margin-left: 20px;
     }
 
+    .checkbox input{
+        display:none;
+    }
+
+    .checkmark{
+        width:20px;
+        height:20px;
+        border:2px solid var(--principal-pink);
+        border-radius:4px;
+        background:#fff;
+        position:relative;
+    }
+
+    .checkbox input:checked + .checkmark{
+        background:var(--principal-pink);
+    }
+
+    .checkbox input:checked + .checkmark::after{
+        content:"✓";
+        color:#fff;
+        position:absolute;
+        left:4px;
+        top:-1px;
+        font-size:14px;
+    }
     .products{
         padding:15px;
         display:flex;
@@ -391,9 +420,9 @@ body {
     }
 
     .product-card img{
-        width:120px;
-        height:120px;
-        object-fit:cover;
+        width:320px;
+        height:220px;
+        object-fit:contain;
         border-radius:8px;
     }
 
@@ -412,10 +441,12 @@ body {
         margin-bottom:8px;
     }
 
-    .content p{
-        font-size:12px;
+    .content .description{
+        font-size:16px;
         color:#555;
         line-height:18px;
+        display: block;
+        padding: 30px;
     }
 
     .bottom{
@@ -434,14 +465,13 @@ body {
         background:var(--principal-pink);
         color:white;
         border:none;
-        padding:8px 18px;
+        padding:15px 40px;
         border-radius:6px;
         cursor:pointer;
     }
 
     .fav{
-        width:34px;
-        height:34px;
+        padding: 15px;
         border:none;
         border-radius:6px;
         background:#ffeaf3;

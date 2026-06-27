@@ -102,3 +102,13 @@ footer {
     padding: 10px;
     margin-top: 10px;
 }
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    
+}

@@ -431,7 +431,7 @@ body {
     }
 
     .buy{
-        background:var(--pink);
+        background:var(--principal-pink);
         color:white;
         border:none;
         padding:8px 18px;

@@ -1,0 +1,191 @@
+:root {
+    --principal-pink: #FF8AC0;
+    --bg-pink-light: #FFD9EA;
+    --bg-brown: rgba(113, 57, 37, 0.5);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-pink-light);
+}
+
+.header {
+    padding: 12px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s;
+}
+
+.header .navBar {
+    display: none;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h1 {
+    color: var(--principal-pink);
+}
+
+.logo span {
+    color: var(--bg-brown);
+}
+
+.logo h1, span {
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#searchForm {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+#searchForm.active {
+    width: 250px;
+    opacity: 1;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-icons #btn-search{
+    color: var(--principal-pink);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: inherit;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-icons #btn-carrinho {
+    display: none;
+}
+
+#btn-search.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header-icons #search-input {
+    width: 0;
+    border: none;
+    border-bottom: 1px solid var(--principal-pink);
+    outline: none;
+    padding: 5px;
+}
+
+.header-icons #search-input:focus {
+    transition: all .5s linear;
+    width: 200px;
+}
+
+#btn-menu{
+    position: relative;
+    z-index: 10000;
+    color: var(--principal-pink);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+}
+
+.menu-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: none;
+    justify-content: flex-end;
+    z-index: 9999;
+}
+
+.menu-modal.active {
+    display: flex;
+}
+
+.menu-content {
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn .3s ease;
+}
+
+.item-modal {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    transition: .3s;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.item-modal:hover,
+.item-modal.active {
+    background-color: var(--principal-pink);
+    color: white;
+}
+
+.item-modal {
+    font-family: "Kaushan Script", cursive;
+    padding: 10px;
+}
+
+
+.close-menu {
+    align-self: flex-end;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

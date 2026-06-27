@@ -408,10 +408,6 @@ footer {
 /* TABLET */
 
 @media (min-width: 768px) {
-   .logo img{
-        width: 48px;
-        height: 48px;
-    }
 
     .header .navBar {
         display: flex;

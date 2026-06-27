@@ -182,11 +182,16 @@ body {
 }
 
 .filters{
-    padding:18px;
+    padding:20px;
 }
 
 .filters h3{
     font-family:"Kaushan Script",cursive;
+    margin-bottom:12px;
+}
+
+.filters label{
+    display:block;
     margin-bottom:10px;
 }
 

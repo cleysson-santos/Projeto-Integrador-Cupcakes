@@ -39,9 +39,9 @@ O projeto foi desenvolvido utilizando a abordagem **Mobile First**, garantindo u
 ```text
 📦 doce-encantado
  ┣ 📂 assets
- ┃ ┣ 📂 css
- ┃ ┣ 📂 images
- ┃ ┗ 📂 js
+   ┗📂 images
+ ┣ 📂 css 
+ ┣ 📂 js
  ┣ 📜 index.html
  ┣ 📜 README.md
  ┗ 📜 LICENSE

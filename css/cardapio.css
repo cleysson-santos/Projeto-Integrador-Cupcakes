@@ -181,6 +181,29 @@ body {
     cursor: pointer;
 }
 
+.top-bar {
+    background: #8B5E3C;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 24px 12px 12px;
+    position: relative;
+    margin-top: -20px;
+}
+
+.top-bar .arrow {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+}
+
+.top-bar h2 {
+    margin: 0 auto;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+}
+
 .filters{
     padding:20px;
 }
@@ -518,7 +541,7 @@ body {
     .filters{
         position:fixed;
         left:0;
-        top:33px;
+        top:84px;
 
         width:200px;
         height:100vh;

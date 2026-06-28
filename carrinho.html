@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/index.css">
+
+  <title>App Cake</title>
+</head>
+<body>
+  
+  <header class="header scrolled">
+    <div class="logo">
+      <a href="#">
+        <h1>app<span>cake</span></h1>
+      </a>
+    </div>
+    <div class="navBar">
+      <a href="#">Home</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="cardapio.html">Cardápio</a>
+    </div>
+    <div class="header-icons">
+        <form action="" id="searchForm">
+          <input type="search" placeholder="Pesquisar sabor" id="search-input">
+        </form>
+        <button id="btn-search" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="btn-carrinho">
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </button>
+        <div class="navBar">
+          <a href="#" id="carrinho">Carrinho</a>
+        </div>
+        <button id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <div class="menu-modal" id="menuModal">
+          <div class="menu-content">
+            <button class="close-menu" id="closeMenu">
+              <i class="fa-solid fa-x"></i>
+            </button>
+
+            <a href="index.html" class="item-modal" data-page="index">Home</a>
+            <a href="galeria.html" class="item-modal" data-page="galeria">Galeria</a>
+            <a href="cardapio.html" class="item-modal" data-page="cardapio">Cardápio</a>
+            <a href="#" class="item-modal" data-page="carrinho">Carrinho</a>
+          </div>
+        </div>
+    </div>
+  </header>

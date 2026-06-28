@@ -6,7 +6,7 @@ A ideia surgiu de um trabalho da faculdade onde era pra fazer apenas o Wireframe
 
 ## 📷 Preview
 
-![Preview do projeto](./assets/main-preview-appcake.png)
+![Preview do projeto](./assets/images/main-preview-appcake.png)
 
 ## 🚀 Funcionalidades
 
@@ -44,24 +44,8 @@ O projeto foi desenvolvido utilizando a abordagem **Mobile First**, garantindo u
  ┣ 📂 js
  ┣ 📜 index.html
  ┣ 📜 README.md
- ┗ 📜 LICENSE
 ```
 
-## ▶️ Como executar
-
-1. Clone este repositório
-
-```bash
-git clone https://github.com/seuusuario/doce-encantado.git
-```
-
-2. Entre na pasta
-
-```bash
-cd doce-encantado
-```
-
-3. Abra o arquivo `index.html` no navegador.
 
 ## 🎯 Objetivo
 
@@ -71,21 +55,29 @@ Este projeto foi desenvolvido para praticar conceitos de desenvolvimento Front-e
 
 ### Home
 
-(coloque uma imagem)
+(./assets/images/preview-home-mobile.png)
 
-### Produtos
+### Galeria
 
-(coloque outra imagem)
+(./assets/images/preview-gallery-mobile.png)
+
+### Cardápio
+
+(./assets/images/preview-menu-mobile.png)
 
 ### Carrinho
 
-(coloque outra imagem)
+(./assets/images/preview-cart-mobile.png)
+
+### Finalizar Pedido
+
+(./assets/images/preview-finish-mobile.png)
 
 ## 🔗 Demonstração
 
 GitHub Pages:
 
-https://seuusuario.github.io/doce-encantado/
+https://cleysson-santos.github.io/Projeto-Integrador-Cupcakes/
 
 ## 👨‍💻 Autor
 
@@ -95,4 +87,4 @@ LinkedIn:
 https://linkedin.com/in/cleysson-santos
 
 GitHub:
-https://github.com/seugithub
+https://github.com/cleysson-santos

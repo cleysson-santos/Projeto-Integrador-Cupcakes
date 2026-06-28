@@ -509,4 +509,29 @@ body {
     .header .btn-menu {
         display: none;
     }
+
+   .container{
+        display:flex;
+        min-height:100vh;
+    }
+
+    .filters{
+        position:fixed;
+        left:0;
+        top:33px;
+
+        width:200px;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters label {
+        padding: 20px 0;
+    }
+
+    .products{
+        margin-left:220px;
+        padding:20px;
+    }
 }

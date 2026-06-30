@@ -1,0 +1,22 @@
+.top-bar {
+    position: sticky;
+    top: 63px;
+    z-index: 1000;
+    background: var(--bg-brown-light);
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 12px;
+}
+
+.top-bar .arrow {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-bar h2 {
+    margin: 0 auto;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+}

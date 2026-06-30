@@ -1,3 +1,4 @@
+/* heroBanner */
 .carousel {
     position: relative;
     overflow: hidden;
@@ -80,6 +81,7 @@
     margin: 10px 0 30px 10px;
 }
 
+/* seção mais pedidos */
 .section-maisPedidos,
 .gallery {
     width: 100%;
@@ -167,6 +169,8 @@
     display: none;
 }
 
+/* seção gallery */
+
 .gallery {
     background-color: var(--bg-brown);
     height: 220px;
@@ -201,14 +205,6 @@
     height: 180px;
     border-radius: 12px;
     object-fit: cover;
-}
-
-footer {
-    background: #8B5E3C;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
 }
 
 

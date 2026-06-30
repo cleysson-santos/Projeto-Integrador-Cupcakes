@@ -4,21 +4,6 @@
     --bg-brown: rgba(113, 57, 37, 0.5);
 }
 
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-    background: var(--bg-pink-light);
-}
-
 .header {
     padding: 12px;
     height: 63px;

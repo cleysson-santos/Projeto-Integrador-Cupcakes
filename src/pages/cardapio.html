@@ -7,17 +7,17 @@
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/cardapio.css">
+    <link rel="stylesheet" href="/src/styles/vendor/fonts/google-fonts.css">
+  
+  <!-- global -->
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/components/variaveis.css">
+    
+  <!-- styles -->
+    <link rel="stylesheet" href="/src/styles/layouts/header.css">
+    <link rel="stylesheet" href="src/styles/layouts/footer.css">
+    <link rel="stylesheet" href="/src/styles/pages/cardapio.css">
 
     <title>Cardápio</title>
 </head>
@@ -30,7 +30,7 @@
     </div>
     <div class="navBar">
       <a href="index.html">Home</a>
-      <a href="galeria.html">Galeria</a>
+      <a href="/src/pages/galeria.html">Galeria</a>
       <a href="#">Cardápio</a>
     </div>
     <div class="header-icons">
@@ -55,9 +55,9 @@
             </button>
 
             <a href="index.html" class="item-modal" data-page="index">Home</a>
-            <a href="galeria.html" class="item-modal" data-page="galeria">Galeria</a>
+            <a href="/src/pages/galeria.html" class="item-modal" data-page="galeria">Galeria</a>
             <a href="#" class="item-modal" data-page="cardapio">Cardápio</a>
-            <a href="#" class="item-modal" data-page="carrinho">Carrinho</a>
+            <a href="/src/pages/carrinho.html" class="item-modal" data-page="carrinho">Carrinho</a>
           </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
 
     <main class="products">
         <article class="product-card">
-            <img src="assets/images/cupcake-chocolate-sm.png">
+            <img src="/src/assets/images/mobile/cupcake-chocolate-sm.png">
             <div class="content">
                 <h2>Chocolate</h2>
                 <p class="description">
@@ -119,7 +119,7 @@
         </article>
 
         <article class="product-card reverse">
-            <img src="assets/images/cupcake-doceleite-sm.png">
+            <img src="/src/assets/images/mobile/cupcake-doceleite-sm.png">
             <div class="content">
                 <h2>Doce de leite</h2>
                 <p class="description">
@@ -141,7 +141,7 @@
 
 
         <article class="product-card">
-            <img src="assets/images/cupcake-morango-sm.png">
+            <img src="/src/assets/images/mobile/cupcake-morango-sm.png">
 
             <div class="content">
                 <h2>Morango</h2>
@@ -163,7 +163,7 @@
         </article>
         
         <article class="product-card reverse">
-            <img src="assets/images/cupcake-baunilha-sm.png">
+            <img src="/src/assets/images/mobile/cupcake-baunilha-sm.png">
 
             <div class="content">
                 <h2>Baunilha</h2>
@@ -184,7 +184,7 @@
             </div>
         </article>
         <article class="product-card">
-            <img src="assets/images/cupcake-ganache-sm.png">
+            <img src="/src/assets/images/mobile/cupcake-ganache-sm.png">
 
             <div class="content">
                 <h2>Ganache</h2>

@@ -1,5 +1,5 @@
 footer {
-    background: #8B5E3C;
+    background: var(--bg-brown-light);
     color: white;
     text-align: center;
     padding: 10px;

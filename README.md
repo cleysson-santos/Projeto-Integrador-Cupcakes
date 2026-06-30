@@ -1,4 +1,4 @@
-# 🧁 Doce Encantado
+# 🧁 APPCAKE
 
 Uma loja virtual responsiva para venda de cupcakes, desenvolvida com foco em uma experiência moderna e intuitiva.
 
@@ -23,25 +23,53 @@ A ideia surgiu de um trabalho da faculdade onde era pra fazer apenas o Wireframe
 - HTML5
 - CSS3
 - JavaScript
-- Git
-- GitHub
 
 ## 📱 Responsividade
 
 O projeto foi desenvolvido utilizando a abordagem **Mobile First**, garantindo uma boa experiência em:
 
 - 📱 Smartphones
-- 💻 Notebooks
+- 💻 Tablets
 - 🖥️ Desktops
 
 ## 📂 Estrutura do projeto
 
 ```text
-📦 doce-encantado
- ┣ 📂 assets
-   ┗📂 images
- ┣ 📂 css 
- ┣ 📂 js
+📦 APPCAKE
+ ┣ 📂 src
+   ┣ 📂 assets
+      ┣ 📂 icons
+      ┣ 📂 images
+        ┣ 📂 desktop
+          ┣ 📜 imagens-desktop.png
+        ┣ 📂 mobile
+          ┣ 📜 imagens-mobile.png
+        ┗ 📂 tablet
+          ┣ 📜 imagens-tablet.png
+   ┣ 📂 pages
+      ┣ 📜 cardapio.html
+      ┣ 📜 carrinho.html
+      ┣ 📜 galeria.html
+   ┣ 📂 scripts
+      ┣ 📂 commons
+        ┣ 📜 carrossel.js
+        ┣ 📜 header.js
+      ┣ 📂 services
+      ┗ 📂 vendor
+   ┣ 📂 styles
+      ┣ 📂 components
+        ┣ 📜 variaveis.css
+      ┣ 📂 layouts
+        ┣ 📜 footer.css
+        ┣ 📜 header.css
+        ┣ 📜 top-bar.css
+      ┣ 📂 pages
+        ┣ 📜 cardapio.css
+        ┣ 📜 galeria.css
+        ┣ 📜 home.css
+      ┣ 📂 vendor
+        ┗ 📂 fonts
+          ┣ 📜 global.css
  ┣ 📜 index.html
  ┣ 📜 README.md
 ```

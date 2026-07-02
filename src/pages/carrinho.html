@@ -10,16 +10,18 @@
 
 
   <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/src/styles/vendor/fonts/google-fonts.css">
 
 
-    <link rel="stylesheet" href="/css/index.css">
+  <!-- global -->
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/components/variaveis.css">
+    
+  <!-- styles -->
+  <link rel="stylesheet" href="/src/styles/pages/carrinho.css">
+    <link rel="stylesheet" href="/src/styles/layouts/top-bar.css">
+    <link rel="stylesheet" href="/src/styles/layouts/header.css">
+    <link rel="stylesheet" href="/src/styles/layouts/footer.css">
 
   <title>App Cake</title>
 </head>
@@ -74,14 +76,14 @@
   <main class="cart">
 
     <article class="cart-card">
-        <img src="assets/cupcake-doceleite-sm.png" alt="Cupcake">
+        <img src="/src/assets/images/mobile/cupcake-doceleite-sm.png" alt="Cupcake">
         <div class="cart-info">
             <h2>Leite Condensado</h2>
             <div class="quantity">
-                <span>Quantidade:</span>
+                <div>Quantidade:</div>
                 <div class="controls">
                     <button>-</button>
-                    <span>1</span>
+                    <div>1</div>
                     <button>+</button>
                 </div>
             </div>
@@ -90,21 +92,21 @@
     </article>
 
     <article class="cart-card">
-        <img src="assets/cupcake-chocolate-sm.png" alt="Cupcake">
+        <img src="/src/assets/images/mobile/cupcake-chocolate-sm.png" alt="Cupcake">
         <div class="cart-info">
             <h2>Chocolate</h2>
             <div class="quantity">
-                <span>Quantidade:</span>
+                <div>Quantidade:</div>
                 <div class="controls">
                     <button>-</button>
-                    <span>1</span>
+                    <div>1</div>
                     <button>+</button>
                 </div>
             </div>
             <p class="price">R$ 7,99</p>
         </div>
     </article>
-    
+
 </main>
 
 <section class="finish">

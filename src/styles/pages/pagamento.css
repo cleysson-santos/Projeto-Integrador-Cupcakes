@@ -1,0 +1,169 @@
+main{
+    flex:1;
+    padding:20px 16px;
+}
+
+/* ================= SEÇÕES ================= */
+
+.delivery,
+.payment{
+    margin-bottom:40px;
+}
+
+.delivery h2,
+.payment h2{
+    font-size:18px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+/* ================= INPUTS ================= */
+
+input[type=text],
+input[type=number]{
+
+    width:100%;
+    height:40px;
+
+    border:none;
+    border-radius:5px;
+
+    padding:0 10px;
+
+    margin-bottom:10px;
+
+    background:#fff;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+.small{
+    width:95px;
+}
+
+/* ================= PAGAMENTO ================= */
+
+.payment-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.payment-methods{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.payment-methods label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:16px;
+}
+
+.payment-methods input{
+    accent-color:var(--principal-pink);
+}
+
+.card-info{
+    flex:1;
+}
+
+.card-info input{
+    width:100%;
+}
+
+/* ================= PIX ================= */
+
+.pix{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.pix-qrcode{
+
+    width:120px;
+    height:120px;
+
+    background:#d9d1d1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2rem;
+
+    color:#333;
+}
+
+/* ================= BOTÃO ================= */
+
+.finish{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.finish-btn{
+
+    width:210px;
+    height:50px;
+
+    border:none;
+    border-radius:8px;
+
+    background:var(--principal-pink);
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.25);
+
+    transition:.25s;
+}
+
+.finish-btn:hover{
+
+    background:#ff69b4;
+    transform:scale(1.03);
+
+}
+
+@media (min-width:768px){
+
+    main{
+        max-width:700px;
+        margin:auto;
+        width:100%;
+    }
+
+    .delivery h2,
+    .payment h2{
+        font-size:22px;
+    }
+
+    input[type=text],
+    input[type=number]{
+        height:48px;
+        font-size:16px;
+    }
+
+    .payment-methods label{
+        font-size:18px;
+    }
+
+    .pix-qrcode{
+        width:180px;
+        height:180px;
+    }
+
+    .finish-btn{
+        width:280px;
+        height:60px;
+        font-size:18px;
+    }
+
+}

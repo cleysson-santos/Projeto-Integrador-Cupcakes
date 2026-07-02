@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="/css/index.css">
@@ -57,7 +57,7 @@
               <i class="fa-solid fa-x"></i>
             </button>
 
-            <a href="index.html" class="item-modal" data-page="index">Home</a>
+            <a href="/index.html" class="item-modal" data-page="index">Home</a>
             <a href="galeria.html" class="item-modal" data-page="galeria">Galeria</a>
             <a href="cardapio.html" class="item-modal" data-page="cardapio">Cardápio</a>
             <a href="#" class="item-modal" data-page="carrinho">Carrinho</a>
@@ -65,3 +65,53 @@
         </div>
     </div>
   </header>
+
+  <div class="top-bar">
+    <a href="/index.html" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <h2>Carrinho</h2>
+  </div>
+
+  <main class="cart">
+
+    <article class="cart-card">
+        <img src="assets/cupcake-doceleite-sm.png" alt="Cupcake">
+        <div class="cart-info">
+            <h2>Leite Condensado</h2>
+            <div class="quantity">
+                <span>Quantidade:</span>
+                <div class="controls">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <p class="price">R$ 7,99</p>
+        </div>
+    </article>
+
+    <article class="cart-card">
+        <img src="assets/cupcake-chocolate-sm.png" alt="Cupcake">
+        <div class="cart-info">
+            <h2>Chocolate</h2>
+            <div class="quantity">
+                <span>Quantidade:</span>
+                <div class="controls">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <p class="price">R$ 7,99</p>
+        </div>
+    </article>
+    
+</main>
+
+<section class="finish">
+    <button class="finish-btn">
+        Finalizar Pedido
+    </button>
+</section>
+
+</body>
+</html>

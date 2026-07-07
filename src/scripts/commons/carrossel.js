@@ -1,171 +1,199 @@
-(function(){
+(function () {
+  'use strict';
 
-    const bannerTrack = document.getElementById('bannerTrack');
-    const bannerItems = bannerTrack.querySelectorAll('.carousel-item');
-    const bannerPrev = document.querySelector('.heroBanner .arrow.left');
-    const bannerNext = document.querySelector('.heroBanner .arrow.right');
+  // Ajuste este valor para bater com o "gap" real definido no CSS da galeria
+  const GALLERY_GAP = 12;
+  // Quantos pixels de arraste são necessários para trocar de slide
+  const SWIPE_THRESHOLD = 50;
 
-    let bannerIndex = 0;
+  // -----------------------------------------------------------------
+  // Helper genérico: unifica mouse e touch num único conjunto de eventos.
+  // Evita repetir a mesma lógica de "start/move/end" 3 vezes no arquivo.
+  // -----------------------------------------------------------------
+  function attachDrag(el, { onStart, onMove, onEnd }) {
+    let dragging = false;
 
-    function updateBanner() {
-        bannerTrack.style.transform =
-            `translateX(-${bannerIndex * 100}%)`;
+    function start(x) {
+      dragging = true;
+      onStart(x);
+    }
+    function move(x) {
+      if (!dragging) return;
+      onMove(x);
+    }
+    function end(x) {
+      if (!dragging) return;
+      dragging = false;
+      onEnd(x);
     }
 
-    bannerNext.addEventListener('click', () => {
-        bannerIndex++;
+    // Touch (celular/tablet)
+    el.addEventListener('touchstart', e => start(e.touches[0].clientX), { passive: true });
+    el.addEventListener('touchmove', e => move(e.touches[0].clientX), { passive: true });
+    el.addEventListener('touchend', e => end(e.changedTouches[0].clientX));
 
-        if(bannerIndex >= bannerItems.length) {
-            bannerIndex = 0;
-        }
+    // Mouse (desktop) — mesma lógica, sem duplicar código
+    el.addEventListener('mousedown', e => start(e.clientX));
+    window.addEventListener('mousemove', e => move(e.clientX));
+    window.addEventListener('mouseup', e => end(e.clientX));
+  }
 
-        updateBanner();
+  // -----------------------------------------------------------------
+  // BANNER (heroBanner) — desliza 100% de largura por slide
+  // -----------------------------------------------------------------
+  function initBanner() {
+    const track = document.getElementById('bannerTrack');
+    const items = track.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('bannerPrev');
+    const nextBtn = document.getElementById('bannerNext');
+
+    let index = 0;
+    let startX = 0;
+
+    function update() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function next() {
+      index = (index + 1) % items.length;
+      update();
+    }
+    function prev() {
+      index = (index - 1 + items.length) % items.length;
+      update();
+    }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+
+    attachDrag(track, {
+      onStart(x) {
+        startX = x;
+        track.style.transition = 'none'; // segue o dedo/mouse sem animação
+      },
+      onMove(x) {
+        const delta = x - startX;
+        track.style.transform = `translateX(calc(-${index * 100}% + ${delta}px))`;
+      },
+      onEnd(x) {
+        track.style.transition = ''; // reativa a animação suave pro "encaixe"
+        const diff = startX - x;
+        if (diff > SWIPE_THRESHOLD) next();
+        else if (diff < -SWIPE_THRESHOLD) prev();
+        else update(); // arraste pequeno demais, volta pro lugar
+      }
     });
 
-    bannerPrev.addEventListener('click', () => {
-        bannerIndex--;
+    update(); // ← corrige o bug: calcula a posição já na inicialização
+    window.addEventListener('resize', update);
+  }
 
-        if(bannerIndex < 0) {
-            bannerIndex = bannerItems.length - 1;
-        }
-
-        updateBanner();
-});
-
-// SWIPE
-
-let startX = 0;
-
-bannerTrack.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-});
-
-bannerTrack.addEventListener('touchend', e => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (diff > 50) bannerNext.click();
-    if (diff < -50) bannerPrev.click();
-});
-
-window.addEventListener('resize', () => {
-    updateBanner();
-    updatePedidos();
-    updateGallery();
-});
-
-
-// MAIS PEDIDOS
-
-const pedidoTrack = document.getElementById('pedidoTrack');
-const pedidoItems = pedidoTrack.querySelectorAll('.carousel-item');
-const pedidoPrev = document.querySelector('.section-maisPedidos .arrow.left');
-const pedidoNext = document.querySelector('.section-maisPedidos .arrow.right');
-
-let pedidoIndex = 0;
-
-function updatePedidos() {
+  // -----------------------------------------------------------------
+  // MAIS PEDIDOS — centraliza o card ativo (mantém sua ideia original)
+  // -----------------------------------------------------------------
+  function initPedidos() {
     const container = document.querySelector('.section-maisPedidos');
-    const containerWidth = container.offsetWidth;
-    const currentCard = pedidoItems[pedidoIndex];
-    const cardWidth = currentCard.offsetWidth;
-    const cardLeft = currentCard.offsetLeft;
-    const translateX =
-        cardLeft - (containerWidth / 2) + (cardWidth / 2);
+    const track = document.getElementById('pedidoTrack');
+    const items = track.querySelectorAll('.carousel-item');
+    const prevBtn = container.querySelector('.arrow.left');
+    const nextBtn = container.querySelector('.arrow.right');
 
-    pedidoTrack.style.transform =
-    `translateX(-${translateX}px)`;
-    
-    pedidoItems.forEach(item => item.classList.remove('active'));
-    pedidoItems[pedidoIndex].classList.add('active');
-}
+    let index = 0;
+    let startX = 0;
 
-pedidoNext.addEventListener('click', () => {
-    pedidoIndex++;
+    function update() {
+      const containerWidth = container.offsetWidth;
+      const card = items[index];
+      const translateX = card.offsetLeft - (containerWidth / 2) + (card.offsetWidth / 2);
 
-    if(pedidoIndex >= pedidoItems.length) pedidoIndex = 0;
+      track.style.transform = `translateX(-${translateX}px)`;
 
-    updatePedidos();
-})
+      items.forEach(item => item.classList.remove('active'));
+      card.classList.add('active');
+    }
+    function next() {
+      index = (index + 1) % items.length;
+      update();
+    }
+    function prev() {
+      index = (index - 1 + items.length) % items.length;
+      update();
+    }
 
-pedidoPrev.addEventListener('click', () => {
-    pedidoIndex--;
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
 
-    if (pedidoIndex < 0) pedidoIndex = pedidoItems.length - 1;
+    attachDrag(track, {
+      onStart(x) { startX = x; },
+      onEnd(x) {
+        const diff = startX - x;
+        if (diff > SWIPE_THRESHOLD) next();
+        else if (diff < -SWIPE_THRESHOLD) prev();
+      }
+    });
 
-    updatePedidos();
-})
+    update();
+    window.addEventListener('resize', update);
+  }
 
-// SWIPE mais pedidos
+  // -----------------------------------------------------------------
+  // GALERIA — desliza pela largura real do item (sem número "mágico")
+  // -----------------------------------------------------------------
+  function initGallery() {
+    const wrapper = document.querySelector('.gallery');
+    const track = document.getElementById('galleryTrack');
+    const items = track.querySelectorAll('.gallery-item');
+    const prevBtn = document.getElementById('galleryPrev');
+    const nextBtn = document.getElementById('galleryNext');
 
-let pedidoStartX = 0;
+    let index = 0;
+    let startX = 0;
 
-pedidoTrack.addEventListener('touchstart', e => {
-    pedidoStartX = e.touches[0].clientX;
-});
+    function itemWidth() {
+      return items[0].offsetWidth + GALLERY_GAP;
+    }
+    function visibleCount() {
+      return Math.max(1, Math.round(wrapper.offsetWidth / itemWidth()));
+    }
+    function maxIndex() {
+      // último índice em que ainda sobram itens pra preencher a tela
+      return Math.max(0, items.length - visibleCount());
+    }
 
-pedidoTrack.addEventListener('touchend', e => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = pedidoStartX - endX;
+    function update() {
+      index = Math.min(index, maxIndex()); // se redimensionar, corrige o index
+      track.style.transform = `translateX(-${index * itemWidth()}px)`;
+    }
+    function next() {
+      index = index >= maxIndex() ? 0 : index + 1;
+      update();
+    }
+    function prev() {
+      index = index <= 0 ? maxIndex() : index - 1;
+      update();
+    }
 
-    if (diff > 50) pedidoNext.click();
-    if (diff < -50) pedidoPrev.click();
-});
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
 
+    attachDrag(track, {
+      onStart(x) { startX = x; },
+      onEnd(x) {
+        const diff = startX - x;
+        if (diff > SWIPE_THRESHOLD) next();
+        else if (diff < -SWIPE_THRESHOLD) prev();
+      }
+    });
 
-window.addEventListener('load', updatePedidos);
-window.addEventListener('resize', updatePedidos);
+    update();
+    window.addEventListener('resize', update);
+  }
 
-// GALLERIA
-
-const galleryTrack = document.getElementById('galleryTrack');
-const galleryItems = galleryTrack.querySelectorAll('.gallery-item');
-const galleryPrev = document.getElementById('galleryPrev');
-const galleryNext = document.getElementById('galleryNext');
-
-let galleryIndex = 0;
-
-function updateGallery() {
-    const itemWidth = galleryItems[0].offsetWidth + 12;
-
-    galleryTrack.style.transform = 
-        `translateX(-${galleryIndex * itemWidth}px)`;
-}
-
-galleryNext.addEventListener('click', () => {
-    galleryIndex++;
-
-    if (galleryIndex > galleryItems.length - 2) 
-        galleryIndex = 0;
-
-    updateGallery();
-});
-
-galleryPrev.addEventListener('click', () => {
-    galleryIndex--;
-
-    if (galleryIndex < 0) 
-        galleryIndex = galleryItems.length - 2;
-
-    updateGallery();
-})
-
-// SWIPE
-
-let galleryStartX = 0;
-
-galleryTrack.addEventListener('touchstart', e => {
-    galleryStartX = e.touches[0].clientX;
-});
-
-galleryTrack.addEventListener('touchend', e => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = galleryStartX - endX;
-
-    if (diff > 50) galleryNext.click();
-    if (diff < -50) galleryPrev.click();
-});
-
-window.addEventListener('resize', updateGallery);
+  // -----------------------------------------------------------------
+  // Ponto de entrada: como o <script> já usa "defer", o DOM já está
+  // pronto quando este arquivo roda — não precisa esperar 'load'.
+  // -----------------------------------------------------------------
+  initBanner();
+  initPedidos();
+  initGallery();
 
 })();

@@ -1,7 +1,7 @@
 .top-bar {
     position: sticky;
     top: 63px;
-    z-index: 1000;
+    z-index: 999;
     background: var(--bg-brown-light);
     color: #000;
     display: flex;

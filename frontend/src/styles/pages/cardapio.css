@@ -75,6 +75,10 @@
     background: #ffd4e7;
 }
 
+.fav.favorite-selected {
+    background: var(--principal-pink);
+}
+
 /* TABLET */
 @media (min-width: 768px) {
 

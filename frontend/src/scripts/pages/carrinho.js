@@ -1,6 +1,14 @@
 const cartContainer = document.querySelector('.cart');
 const finishButton = document.querySelector('.finish-btn');
 
+function parsePrice(price) {
+    return Number.parseFloat(price.replace('R$', '').replace('.', '').replace(',', '.').trim());
+}
+
+function formatPrice(price) {
+    return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
 function renderCart() {
     const items = window.appCakeCart.getItems();
 
@@ -29,7 +37,7 @@ function renderCart() {
                         <button class="increase" type="button" aria-label="Aumentar quantidade">+</button>
                     </div>
                 </div>
-                <p class="price">${item.price}</p>
+                <p class="price">${formatPrice(parsePrice(item.price) * item.quantity)}</p>
             </div>`;
 
         card.querySelector('.decrease').addEventListener('click', () => updateQuantity(item.id, -1));

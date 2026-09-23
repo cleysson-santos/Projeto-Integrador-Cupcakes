@@ -6,7 +6,7 @@ A ideia surgiu de um trabalho da faculdade onde era pra fazer apenas o Wireframe
 
 ## 📷 Preview
 
-![Preview do projeto](src/assets/images/main-preview-appcake.png)
+![Preview do projeto](./frontend/src/assets/images/main-preview-appcake.png)
 
 ## 🚀 Funcionalidades
 
@@ -83,7 +83,7 @@ Este projeto foi desenvolvido para praticar conceitos de desenvolvimento Front-e
 
 ### Home
 
-(src/assets/images/preview-home-mobile.png)
+(./frontend/src/assets/images/preview-home-mobile.png)
 
 ### Galeria
 

@@ -83,23 +83,23 @@ Este projeto foi desenvolvido para praticar conceitos de desenvolvimento Front-e
 
 ### Home
 
-(./frontend/src/assets/images/preview-home-mobile.png)
+(/frontend/src/assets/images/preview-home-mobile.png)
 
 ### Galeria
 
-(src/assets/images/preview-gallery-mobile.png)
+(/frontend/src/assets/images/preview-gallery-mobile.png)
 
 ### Cardápio
 
-(src/assets/images/preview-menu-mobile.png)
+(/frontend/src/assets/images/preview-menu-mobile.png)
 
 ### Carrinho
 
-(src/assets/images/preview-cart-mobile.png)
+(/frontend/src/assets/images/preview-cart-mobile.png)
 
 ### Finalizar Pedido
 
-(src/assets/images/preview-finish-mobile.png)
+(/frontend/src/assets/images/preview-finish-mobile.png)
 
 ## 🔗 Demonstração
 

@@ -65,7 +65,9 @@
   </header>
 
   <div class="top-bar">
-    <a href="/index.html" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a class="arrow" id="btnBack" onClick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
     <h2>Cardápio</h2>
   </div>
 
@@ -225,5 +227,6 @@
 
     <script src="/src/scripts/commons/header.js" defer></script>
     <script src="/src/scripts/commons/carrossel.js" defer></script>
+    <script src="/src/scripts/commons/topBar.js" defer></script>
 </body>
 </html>

@@ -18,6 +18,7 @@
     
   <!-- styles -->
     <link rel="stylesheet" href="/src/styles/pages/pagamento.css">
+    <link rel="stylesheet" href="/src/styles/components/search.css">
     <link rel="stylesheet" href="/src/styles/layouts/top-bar.css">
     <link rel="stylesheet" href="/src/styles/layouts/header.css">
     <link rel="stylesheet" href="/src/styles/layouts/footer.css">
@@ -74,53 +75,66 @@
         <h2>Finalizar Pedido</h2>
     </div>
 
-    <main>
-    <section class="delivery">
-        <h2>Endereço de Entrega</h2>
-        <input type="text" placeholder="Endereço">
-        <div class="row">
-            <input class="small" type="number" placeholder="Número">
-        </div>
-        <input type="text" placeholder="Complemento">
-    </section>
+    <form id="paymentForm" novalidate>
+        <main>
+            <section class="delivery">
+                <h2>Endereço de Entrega</h2>
+                <input type="text" name="address" placeholder="Endereço" required>
+                <div class="row">
+                    <input class="small" type="number" name="number" placeholder="Número" min="1" required>
+                </div>
+                <input type="text" name="complement" placeholder="Complemento">
+            </section>
 
-    <section class="payment">
-        <h2>Forma de Pagamento</h2>
-        <div class="payment-content">
-            <div class="payment-methods">
-                <label>
-                    <input type="radio" name="pagamento">
-                    Crédito
-                </label>
-                <label>
-                    <input type="radio" name="pagamento">
-                    Débito
-                </label>
-                <label>
-                    <input type="radio" name="pagamento">
-                    Pix
-                </label>
-            </div>
-            <div class="card-info">
-                <input type="text" placeholder="Nº Cartão">
-                <input type="text" placeholder="CVV">
-                <input type="text" placeholder="Vencimento">
-            </div>
-        </div>
-    </section>
+            <section class="payment">
+                <h2>Forma de Pagamento</h2>
+                <div class="payment-content">
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="pagamento" value="card" checked>
+                            Cartão
+                        </label>
+                        <label>
+                            <input type="radio" name="pagamento" value="boleto">
+                            Boleto
+                        </label>
+                        <label>
+                            <input type="radio" name="pagamento" value="pix">
+                            Pix
+                        </label>
+                    </div>
 
-    <section class="pix">
-        <div class="pix-qrcode">
-            Pix
-        </div>
-    </section>
+                    <div class="payment-details">
+                        <div class="card-info" data-payment-panel="card">
+                            <input type="text" name="cardNumber" placeholder="Nº Cartão" inputmode="numeric" minlength="13" maxlength="19">
+                            <input type="text" name="cardName" placeholder="Nome no cartão" maxlength="80">
+                            <div class="card-row">
+                                <input type="text" name="cardCvv" placeholder="CVV" inputmode="numeric" minlength="3" maxlength="4">
+                                <input type="text" name="cardExpiry" placeholder="Vencimento (MM/AA)" inputmode="numeric" maxlength="5">
+                            </div>
+                        </div>
 
-    <section class="finish">
-        <button class="finish-btn">
-            Concluir Pedido
-        </button>
-    </section>
-</main>
+                        <div class="boleto-info" data-payment-panel="boleto" hidden>
+                            <p>Gere um boleto fictício para visualizar o código de pagamento.</p>
+                            <button class="generate-boleto" type="button">Gerar boleto</button>
+                            <div class="boleto-code" hidden>34191.79001 01043.510047 91020.150008 8 90000000079900</div>
+                        </div>
+
+                        <div class="pix-info" data-payment-panel="pix" hidden>
+                            <p>Escaneie o QR Code fictício abaixo para simular o pagamento.</p>
+                            <div class="pix-qrcode" role="img" aria-label="QR Code fictício para pagamento via Pix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p class="form-error" id="formError" role="alert" hidden></p>
+
+            <section class="finish">
+                <button class="finish-btn" type="submit">Concluir Pedido</button>
+            </section>
+        </main>
+    </form>
 
 
     <footer>
@@ -129,5 +143,7 @@
 
     <script src="/src/scripts/commons/header.js" defer></script>
     <script src="/src/scripts/commons/carrossel.js" defer></script>
+    <script src="/src/scripts/pages/pagamento.js" defer></script>
+    <script src="/src/scripts/commons/search.js" defer></script>
 </body>
 </html>

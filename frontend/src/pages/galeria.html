@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/src/styles/layouts/top-bar.css">
     <link rel="stylesheet" href="/src/styles/layouts/header.css">
     <link rel="stylesheet" href="/src/styles/layouts/footer.css">
+    <link rel="stylesheet" href="/src/styles/components/gallery-modal.css">
     <link rel="stylesheet" href="/src/styles/components/search.css">
     <link rel="stylesheet" href="/src/styles/pages/galeria.css">
 
@@ -131,11 +132,22 @@
     </div>
   </section>
 
+  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle" hidden>
+    <div class="gallery-modal-content">
+      <button class="gallery-modal-close" id="galleryModalClose" type="button" aria-label="Fechar imagem ampliada">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 id="galleryModalTitle" class="sr-only">Imagem ampliada</h2>
+      <img id="galleryModalImage" src="" alt="">
+    </div>
+  </div>
+
   <footer>
     Feito por Cleysson Santos
   </footer>
 
   <script src="/src/scripts/commons/header.js" defer></script>
   <script src="/src/scripts/commons/search.js" defer></script>
+  <script src="/src/scripts/pages/galeria.js" defer></script>
 </body>
 </html>

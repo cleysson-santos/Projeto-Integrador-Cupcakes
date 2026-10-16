@@ -1,5 +1,4 @@
-heroBanner
-.carousel {
+.heroBanner.carousel {
     position: relative;
     overflow: hidden;
 }
@@ -22,8 +21,9 @@ heroBanner
 }
 
 .heroBanner .carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 100%;
 }
 
 #bannerTrack {
@@ -37,17 +37,21 @@ heroBanner
 }
 
 .img-mobile {
+    display: block;
     width: 100%;
-    height: 35vh;
-    object-fit: cover;
+    height: auto;
 }
 
 .img-tablet {
     display: none;
+    width: 100%;
+    height: auto;
 }
 
 .img-desktop {
     display: none;
+    width: 100%;
+    height: auto;
 }
 
 .arrow {
@@ -251,11 +255,6 @@ a {
         transition: transform .4s ease;
     }
 
-    .heroBanner .carousel-item {
-        min-width: 100%;
-        flex-shrink: 0;
-    }
-
     .banner {
         width: 100%;
     }
@@ -370,7 +369,6 @@ a {
     .img-desktop {
         display: block;
         width: 100%;
-        height: 60vh;
     }
 
     .title {

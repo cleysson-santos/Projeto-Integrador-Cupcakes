@@ -12,7 +12,6 @@ A ideia surgiu de um trabalho da faculdade onde era pra fazer apenas o Wireframe
 
 - ✅ Página inicial responsiva
 - ✅ Listagem de produtos
-- ✅ Sistema de busca
 - ✅ Filtro por categorias
 - ✅ Carrinho de compras
 - ✅ Layout Mobile First

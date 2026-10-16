@@ -26,7 +26,7 @@
 
     document.addEventListener('click', (event) => {
         const clicouFora = !input.contains(event.target) && !lupa.contains(event.target);
-        
+
         if (input.classList.contains('active') && clicouFora && searchInputField.value.trim() === '') {
             closeSearch();
         }

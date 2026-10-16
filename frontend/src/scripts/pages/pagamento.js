@@ -46,7 +46,7 @@ paymentForm.addEventListener('submit', (event) => {
         return;
     }
 
-    window.location.href = '/src/pages/pedido-concluido.html';
+    window.location.href = 'pedido-concluido.html';
 });
 
 updatePaymentPanel();

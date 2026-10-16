@@ -1,0 +1,47 @@
+
+/* GALERIA */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* TABLET */
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}

@@ -1,0 +1,235 @@
+
+.products{
+    padding:10px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:10px;
+    display:flex;
+    gap:12px;
+    padding:8px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.product-card img{
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.content{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.content h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.description {
+    display: none;
+}
+
+.bottom span {
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buy{
+    flex: 1;
+    border: none;
+    background: var(--principal-pink);
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.buy:hover{
+    background :var(--principal-pink);
+}
+
+.fav{
+    padding: 10px;
+    border: none;
+    background: #ffe8f2;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.fav:hover{
+    background: #ffd4e7;
+}
+
+.fav.favorite-selected {
+    background: var(--principal-pink);
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .filters{
+        margin-top: 30px;
+        background-color: var(--bg-brown);
+        padding: 20px;
+        display: flex;
+    }
+
+    .filters h3{
+        font-family:"Kaushan Script",cursive;
+        margin-bottom:12px;
+        margin-left: 20px;
+    }
+
+    .checkbox{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        cursor:pointer;
+        margin-left: 20px;
+    }
+
+    .checkbox input{
+        display:none;
+    }
+
+    .checkmark{
+        width:20px;
+        height:20px;
+        border:2px solid var(--principal-pink);
+        border-radius:4px;
+        background:#fff;
+        position:relative;
+    }
+
+    .checkbox input:checked + .checkmark{
+        background:var(--principal-pink);
+    }
+
+    .checkbox input:checked + .checkmark::after{
+        content:"✓";
+        color:#fff;
+        position:absolute;
+        left:4px;
+        top:-1px;
+        font-size:14px;
+    }
+    .products{
+        padding:15px;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .product-card{
+        background:white;
+        border-radius:12px;
+        display:flex;
+        gap:12px;
+        padding:10px;
+        box-shadow:0 3px 10px rgba(0,0,0,.2);
+    }
+
+    .product-card img{
+        width:320px;
+        height:220px;
+        object-fit:contain;
+        border-radius:8px;
+    }
+
+    .reverse{
+        flex-direction:row-reverse;
+    }
+
+    .content{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .content h2{
+        font-size:20px;
+        margin-bottom:8px;
+    }
+
+    .content .description{
+        font-size:16px;
+        color:#555;
+        line-height:18px;
+        display: block;
+        padding: 30px;
+    }
+
+    .bottom{
+        margin-top:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .actions{
+        display:flex;
+        gap:8px;
+    }
+
+    .buy{
+        background:var(--principal-pink);
+        color:white;
+        border:none;
+        padding:15px 40px;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    .fav{
+        padding: 15px;
+        border:none;
+        border-radius:6px;
+        background:#ffeaf3;
+        cursor:pointer;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px){
+
+   .container{
+        display:flex;
+        min-height:100vh;
+    }
+
+    .filters{
+        position:fixed;
+        left:0;
+        top:92px;
+
+        width:200px;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters label {
+        padding: 20px 0;
+    }
+
+    .products{
+        padding:20px;
+    }
+}

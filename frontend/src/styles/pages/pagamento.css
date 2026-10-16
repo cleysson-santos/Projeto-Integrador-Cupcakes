@@ -1,0 +1,231 @@
+main{
+    flex:1;
+    padding:20px 16px;
+}
+
+/* ================= SEÇÕES ================= */
+
+.delivery,
+.payment{
+    margin-bottom:40px;
+}
+
+.delivery h2,
+.payment h2{
+    font-size:18px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+/* ================= INPUTS ================= */
+
+input[type=text],
+input[type=number]{
+
+    width:100%;
+    height:40px;
+
+    border:none;
+    border-radius:5px;
+
+    padding:0 10px;
+
+    margin-bottom:10px;
+
+    background:#fff;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+.small{
+    width:95px;
+}
+
+/* ================= PAGAMENTO ================= */
+
+.payment-content{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.payment-methods{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:12px 16px;
+}
+
+.payment-methods label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:16px;
+}
+
+.payment-methods input{
+    accent-color:var(--principal-pink);
+}
+
+.card-info{
+    flex:1;
+}
+
+.card-info input{
+    width:100%;
+}
+
+.payment-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-row {
+    display: flex;
+    gap: 10px;
+}
+
+.card-row input:first-child {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+}
+
+.card-row input:last-child {
+    flex: 2;
+    min-width: 0;
+    width: auto;
+}
+
+.boleto-info,
+.pix-info {
+    text-align: center;
+}
+
+.boleto-info p,
+.pix-info p {
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.generate-boleto {
+    border: none;
+    border-radius: 6px;
+    padding: 11px 18px;
+    background: var(--principal-pink);
+    cursor: pointer;
+}
+
+.generate-boleto:disabled {
+    background: #d3d3d3;
+    cursor: default;
+}
+
+.boleto-code {
+    margin-top: 14px;
+    padding: 10px;
+    background: #f3f3f3;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* ================= PIX ================= */
+
+.pix-qrcode{
+    width:120px;
+    height:120px;
+    margin: 0 auto;
+    border: 8px solid #fff;
+    background-color: #111;
+    background-image:
+        linear-gradient(90deg, #fff 10%, transparent 10% 20%, #fff 20% 30%, transparent 30% 50%, #fff 50% 60%, transparent 60% 80%, #fff 80%),
+        linear-gradient(#fff 10%, transparent 10% 20%, #fff 20% 35%, transparent 35% 55%, #fff 55% 70%, transparent 70% 90%, #fff 90%);
+    background-size: 24px 24px;
+}
+
+.form-error {
+    margin: 0 auto 18px;
+    color: #a00028;
+    text-align: center;
+}
+
+/* ================= BOTÃO ================= */
+
+.finish{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.finish-btn{
+
+    width:210px;
+    height:50px;
+
+    border:none;
+    border-radius:8px;
+
+    background:var(--principal-pink);
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.25);
+
+    transition:.25s;
+}
+
+.finish-btn:hover{
+
+    background:#ff69b4;
+    transform:scale(1.03);
+
+}
+
+@media (min-width:768px){
+
+    .payment-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .payment-methods {
+        flex-direction: column;
+    }
+
+    main{
+        max-width:700px;
+        margin:auto;
+        width:100%;
+    }
+
+    .delivery h2,
+    .payment h2{
+        font-size:22px;
+    }
+
+    input[type=text],
+    input[type=number]{
+        height:48px;
+        font-size:16px;
+    }
+
+    .payment-methods label{
+        font-size:18px;
+    }
+
+    .pix-qrcode{
+        width:180px;
+        height:180px;
+    }
+
+    .finish-btn{
+        width:280px;
+        height:60px;
+        font-size:18px;
+    }
+
+}

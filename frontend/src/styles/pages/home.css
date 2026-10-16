@@ -1,0 +1,378 @@
+.heroBanner.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track,
+.gallery-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.section-maisPedidos .carousel-item {
+    opacity: .5;
+    transform: scale(.9);
+    transition: .3s;
+}
+
+.section-maisPedidos .carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heroBanner .carousel-item {
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 100%;
+}
+
+#bannerTrack {
+    display: flex;
+    gap: 0;
+    transition: transform .4s ease;
+}
+
+.banner {
+    width: 100%;
+}
+
+.img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.img-tablet {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.img-desktop {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(153, 152, 152, 0.26);
+    color: #4b4a4a;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.arrow:hover {
+    background: rgba(66, 66, 66, 0.555);
+}
+
+.arrow.left { 
+    left: 5px; 
+}
+
+.arrow.right { 
+    right: 5px; 
+}
+
+.title {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px 0 30px 10px;
+}
+
+
+.section-maisPedidos,
+.gallery {
+    width: 100%;
+}
+
+.section-maisPedidos {
+    background-color: var(--bg-brown);
+    height: 193px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-maisPedidos .carousel-track {
+    display: flex;
+    align-items: center;
+    transition: transform .4s ease;
+}
+
+.section-maisPedidos .carousel-item {
+    flex-shrink: 0;
+}
+
+#pedidoTrack {
+    padding-inline: calc(50vw - 160px);
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    height: 170px;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card-footer {
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-btn {
+    border-radius: 5px;
+    border: none;
+    padding: 12px 24px;
+    background-color: var(--principal-pink);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.buy-btn:hover {
+    background-color: #f14294;
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.fav-btn {
+    border-radius: 5px;
+    border: none;
+    padding: 12px;
+    background-color: var(--bg-pink-light);
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.fav-btn:hover {
+    background-color: #ecbbd2;
+}
+
+.fav-btn-clicado {
+    background-color: var(--principal-pink);
+}
+
+
+
+.gallery {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-brown);
+    height: 220px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(.22,.68,0,1);
+  visibility: hidden;
+}
+
+.gallery-track.is-ready {
+  visibility: visible;
+}
+
+.gallery-page {
+  display: flex;       
+  gap: 12px;
+  min-width: 100%;      
+  flex-shrink: 0;       
+  box-sizing: border-box;
+  padding: 0 14px;      
+}
+
+.gallery-item {
+  flex: 1 1 0;          
+  min-width: 0;         
+  height: 185px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  display: block;
+}
+
+
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+    /* section mais pedidos */
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-tablet {
+        display: block;
+        width: 100%;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .heroBanner {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .heroBanner .carousel-track {
+        display: flex;
+        gap: 0;
+        transition: transform .4s ease;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .arrow.left { 
+        left: 20px;
+        font-size: 20px; 
+    }
+
+    .arrow.right { 
+        right: 20px;
+        font-size: 20px; 
+    }
+
+
+/* SECTION MAIS PEDIDOS */
+
+    .section-maisPedidos {
+        height: 296px;
+        padding: 30px;
+    }
+
+    .section-maisPedidos .carousel-item{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card{
+        width: 216px;
+        height: 238px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .card img{
+        width: 100%;
+        height: 135px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .title-product{
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buy-btn{
+        flex: 1;
+        height: 40px;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .fav-btn{
+        width: 52px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* SECTION GALERIA */
+
+    .gallery {
+        height: 164px;
+        width: 100%;
+    }
+
+    .gallery-item {
+        flex: 1;
+    }
+
+    .gallery-item img {
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+/* LAPTOP */
+
+@media (min-width: 1024px){
+    
+    /* heroBanner */
+    .img-mobile {
+        display: none;
+    }
+
+    .img-tablet {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+}

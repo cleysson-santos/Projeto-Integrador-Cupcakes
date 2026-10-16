@@ -1,0 +1,63 @@
+.gallery-modal[hidden] {
+    display: none;
+}
+
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .78);
+}
+
+.gallery-modal-content {
+    position: relative;
+    max-width: min(90vw, 900px);
+    max-height: 90vh;
+}
+
+.gallery-modal-content img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .45);
+}
+
+.gallery-modal-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--principal-pink);
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gallery-modal-close:hover {
+    background: #ff69b4;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

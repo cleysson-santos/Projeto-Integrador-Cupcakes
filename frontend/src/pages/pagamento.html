@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- fonts -->
+    <link rel="stylesheet" href="../styles/vendor/fonts/google-fonts.css">
+
+
+  <!-- global -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components/variaveis.css">
+    
+  <!-- styles -->
+    <link rel="stylesheet" href="../styles/pages/pagamento.css">
+    <link rel="stylesheet" href="../styles/layouts/top-bar.css">
+    <link rel="stylesheet" href="../styles/layouts/header.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+
+    <title>Pagamento</title>
+</head>
+<body>
+    <header class="header scrolled">
+        <div class="logo">
+        <a href="../../index.html">
+            <h1>app<span>cake</span></h1>
+        </a>
+        </div>
+        <div class="navBar">
+        <a href="#">Home</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="cardapio.html">Cardápio</a>
+        </div>
+        <div class="header-icons">
+            <form action="" id="searchForm">
+            <input type="search" placeholder="Pesquisar sabor" id="search-input">
+            </form>
+            <button id="btn-search" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="btn-carrinho">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </button>
+            <div class="navBar">
+            <a href="#" id="carrinho">Carrinho</a>
+            </div>
+            <button id="btn-menu">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="menu-modal" id="menuModal">
+            <div class="menu-content">
+                <button class="close-menu" id="closeMenu">
+                <i class="fa-solid fa-x"></i>
+                </button>
+
+                <a href="../../index.html" class="item-modal" data-page="index">Home</a>
+                <a href="./galeria.html" class="item-modal" data-page="galeria">Galeria</a>
+                <a href="./cardapio.html" class="item-modal" data-page="cardapio">Cardápio</a>
+                <a href="./carrinho.html" class="item-modal" data-page="carrinho">Carrinho</a>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="top-bar">
+        <a class="arrow" id="btnBack" onClick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>Finalizar Pedido</h2>
+    </div>
+
+    <form id="paymentForm" novalidate>
+        <main>
+            <section class="delivery">
+                <h2>Endereço de Entrega</h2>
+                <input type="text" name="address" placeholder="Endereço" required>
+                <div class="row">
+                    <input class="small" type="number" name="number" placeholder="Número" min="1" required>
+                </div>
+                <input type="text" name="complement" placeholder="Complemento">
+            </section>
+
+            <section class="payment">
+                <h2>Forma de Pagamento</h2>
+                <div class="payment-content">
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="pagamento" value="card" checked>
+                            Cartão
+                        </label>
+                        <label>
+                            <input type="radio" name="pagamento" value="boleto">
+                            Boleto
+                        </label>
+                        <label>
+                            <input type="radio" name="pagamento" value="pix">
+                            Pix
+                        </label>
+                    </div>
+
+                    <div class="payment-details">
+                        <div class="card-info" data-payment-panel="card">
+                            <input type="text" name="cardNumber" placeholder="Nº Cartão" inputmode="numeric" minlength="13" maxlength="19">
+                            <input type="text" name="cardName" placeholder="Nome no cartão" maxlength="80">
+                            <div class="card-row">
+                                <input type="text" name="cardCvv" placeholder="CVV" inputmode="numeric" minlength="3" maxlength="4">
+                                <input type="text" name="cardExpiry" placeholder="Vencimento (MM/AA)" inputmode="numeric" maxlength="5">
+                            </div>
+                        </div>
+
+                        <div class="boleto-info" data-payment-panel="boleto" hidden>
+                            <p>Gere um boleto fictício para visualizar o código de pagamento.</p>
+                            <button class="generate-boleto" type="button">Gerar boleto</button>
+                            <div class="boleto-code" hidden>34191.79001 01043.510047 91020.150008 8 90000000079900</div>
+                        </div>
+
+                        <div class="pix-info" data-payment-panel="pix" hidden>
+                            <p>Escaneie o QR Code fictício abaixo para simular o pagamento.</p>
+                            <div class="pix-qrcode" role="img" aria-label="QR Code fictício para pagamento via Pix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p class="form-error" id="formError" role="alert" hidden></p>
+
+            <section class="finish">
+                <button class="finish-btn" type="submit">Concluir Pedido</button>
+            </section>
+        </main>
+    </form>
+
+
+    <footer>
+        Feito por Cleysson Santos
+    </footer>
+
+    <script src="../scripts/commons/header.js" defer></script>
+    <script src="../scripts/commons/carrossel.js" defer></script>
+    <script src="../scripts/pages/pagamento.js" defer></script>
+</body>
+</html>

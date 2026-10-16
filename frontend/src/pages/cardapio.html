@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- fonts -->
+    <link rel="stylesheet" href="../styles/vendor/fonts/google-fonts.css">
+  
+  <!-- global -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components/variaveis.css">
+    
+  <!-- styles -->
+    <link rel="stylesheet" href="../styles/layouts/top-bar.css">
+    <link rel="stylesheet" href="../styles/layouts/header.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+    <link rel="stylesheet" href="../styles/pages/cardapio.css">
+
+    <title>Cardápio</title>
+</head>
+<body>
+    <header class="header scrolled">
+    <div class="logo">
+      <a href="../../index.html">
+        <h1>app<span>cake</span></h1>
+      </a>
+    </div>
+    <div class="navBar">
+      <a href="../../index.html">Home</a>
+      <a href="./galeria.html">Galeria</a>
+      <a href="#">Cardápio</a>
+    </div>
+    <div class="header-icons">
+                <form action="" id="searchForm">
+                    <input type="search" placeholder="Pesquisar sabor" id="search-input">
+                </form>
+                <button id="btn-search" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="btn-carrinho">
+          <a href="./carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </button>
+        <div class="navBar">
+          <a href="./carrinho.html" id="carrinho">Carrinho</a>
+        </div>
+        <button id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <div class="menu-modal" id="menuModal">
+          <div class="menu-content">
+            <button class="close-menu" id="closeMenu">
+              <i class="fa-solid fa-x"></i>
+            </button>
+
+            <a href="../../index.html" class="item-modal" data-page="index">Home</a>
+            <a href="./galeria.html" class="item-modal" data-page="galeria">Galeria</a>
+            <a href="#" class="item-modal" data-page="cardapio">Cardápio</a>
+            <a href="./carrinho.html" class="item-modal" data-page="carrinho">Carrinho</a>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <div class="top-bar">
+    <a class="arrow" id="btnBack" onClick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2>Cardápio</h2>
+  </div>
+
+  <div class="container">
+
+    <main class="products">
+        <article class="product-card">
+            <img src="../assets/images/mobile/cupcake-chocolate-sm.png">
+            <div class="content">
+                <h2>Chocolate</h2>
+                <p class="description">
+                    Massa de chocolate macia e úmida, coberta com um delicioso creme de chocolate e finalizada com gotas de chocolate. Perfeito para quem ama um sabor intenso e irresistível.
+                </p>
+
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-card reverse">
+            <img src="../assets/images/mobile/cupcake-doceleite-sm.png">
+            <div class="content">
+                <h2>Doce de leite</h2>
+                <p class="description">
+                    Massa macia de baunilha, coberta com um cremoso recheio de doce de leite e finalizada com calda, cubos de doce de leite e farofa crocante. Uma combinação irresistível para os amantes de doces.
+                </p>
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="product-card">
+            <img src="../assets/images/mobile/cupcake-morango-sm.png">
+
+            <div class="content">
+                <h2>Morango</h2>
+                <p class="description">
+                    Cupcake de Morango preparado com massa macia e cobertura cremosa sabor morango, finalizado com confeitos crocantes. Uma opção deliciosa, delicada e perfeita para festas, presentes ou para adoçar qualquer momento.
+                </p>
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="product-card reverse">
+            <img src="../assets/images/mobile/cupcake-baunilha-sm.png">
+
+            <div class="content">
+                <h2>Baunilha</h2>
+                <p class="description">
+                    Cupcake sabor baunilha, preparado com massa macia e cobertura cremosa de baunilha, finalizado com farelos e cubinhos decorativos. Uma opção deliciosa, delicada e perfeita para qualquer ocasião.
+                </p>
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <img src="../assets/images/mobile/cupcake-pistache-sm.png">
+
+            <div class="content">
+                <h2>Pistache</h2>
+                <p class="description">
+                    Delicioso cupcake com massa de pistache fofinha, coberto com uma generosa camada de pistache cremoso e finalizado com granulado de pistache. Perfeito para adoçar qualquer momento.
+                </p>
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        
+        <article class="product-card reverse">
+            <img src="../assets/images/mobile/cupcake-redvelvet-sm.png">
+
+            <div class="content">
+                <h2>Red Velvet</h2>
+                <p class="description">
+                    Delicioso cupcake com massa de red velvet fofinha, coberto com uma generosa camada de baunilha cremoso e finalizado com granulado de red velvet. Perfeito para adoçar qualquer momento.
+                </p>
+                <div class="bottom">
+                    <span>R$ 7,99</span>
+                    <div class="actions">
+                        <a href="./carrinho.html">
+                            <button class="buy">
+                            Comprar
+                            </button>
+                        </a>
+                        <button class="fav">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+
+<footer>
+    Feito por Cleysson Santos
+</footer>
+
+    <script src="../scripts/commons/header.js" defer></script>
+    <script src="../scripts/commons/carrossel.js" defer></script>
+    <script src="../scripts/commons/buttons.js" defer></script>
+</body>
+</html>

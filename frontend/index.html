@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- fonts -->
+    <link rel="stylesheet" href="./src/styles/vendor/fonts/google-fonts.css">
+  
+  <!-- global -->
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/components/variaveis.css">
+    
+  <!-- styles -->
+    <link rel="stylesheet" href="./src/styles/layouts/header.css">
+    <link rel="stylesheet" href="./src/styles/layouts/footer.css">
+    <link rel="stylesheet" href="./src/styles/pages/home.css">
+
+  <title>App Cake</title>
+</head>
+<body>
+  
+  <header class="header scrolled">
+    <div class="logo">
+      <a href="#" onclick="history.scrollRestoration = 'manual'; window.scrollTo(0, 0); window.location.reload(); return false;">
+        <h1>app<span>cake</span></h1>
+      </a>
+    </div>
+    <div class="navBar">
+      <a href="#">Home</a>
+      <a href="./src/pages/galeria.html">Galeria</a>
+      <a href="./src/pages/cardapio.html">Cardápio</a>
+    </div>
+    <div class="header-icons">
+        <form action="" id="searchForm">
+          <input type="search" placeholder="Pesquisar sabor" id="search-input">
+        </form>
+        <button id="btn-search" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="btn-carrinho">
+          <a href="./src/pages/carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </button>
+        <div class="navBar">
+          <a href="./src/pages/carrinho.html" id="carrinho">Carrinho</a>
+        </div>
+        <button id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <div class="menu-modal" id="menuModal">
+          <div class="menu-content">
+            <button class="close-menu" id="closeMenu">
+              <i class="fa-solid fa-x"></i>
+            </button>
+
+            <a href="#" class="item-modal" data-page="index">Home</a>
+            <a href="./src/pages/galeria.html" class="item-modal" data-page="galeria">Galeria</a>
+            <a href="./src/pages/cardapio.html" class="item-modal" data-page="cardapio">Cardápio</a>
+            <a href="./src/pages/carrinho.html" class="item-modal" data-page="carrinho">Carrinho</a>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="heroBanner carousel" id="heroCarousel">
+
+    <div class="carousel-track" id="bannerTrack">
+      <div class="carousel-item">
+        <div class="banner">
+          <img src="./src/assets/images/mobile/hero-banner-sm.png" class="img-mobile">
+          <img src="./src/assets/images/tablet/hero-banner-tablet-retrato.png" class="img-tablet">
+          <img src="./src/assets/images/desktop/hero-banner-laptop.png" class="img-desktop">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="banner">
+          <img src="./src/assets/images/mobile/hero-banner2-sm.png" class="img-mobile">
+          <img src="./src/assets/images/tablet/hero-banner2-tablet-retrato.png" class="img-tablet">
+          <img src="./src/assets/images/desktop/hero-banner2-desktop.png" class="img-desktop">
+        </div>
+      </div>
+    </div>
+    <button class="arrow left" id="bannerPrev">
+      <i class="fa-solid fa-angle-left"></i> 
+    </button>
+    <button class="arrow right" id="bannerNext">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </section>
+  
+  <h3 class="title">Mais pedidos</h3>
+  
+  <section class="section-maisPedidos carousel" id="pedidoCarousel">
+
+    <div class="carousel-track" id="pedidoTrack">
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-chocolate-md.png">
+          
+          <div class="card-footer">
+            <p class="title-product">Chocolate</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-doceleite-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Doce de Leite</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-redvelvet-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Red Velvet</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-baunilha-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Baunilha</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-ganache-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Ganache</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-morango-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Morango</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-ganacheWhite-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Ganache Branco</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-cenoura-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Cenoura</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-chocolate-md.png">
+          
+          <div class="card-footer">
+            <p class="title-product">Chocolate</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-doceleite-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Doce de Leite</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-redvelvet-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Red Velvet</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-baunilha-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Baunilha</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-ganache-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Ganache</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-morango-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Morango</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-ganacheWhite-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Ganache Branco</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="./src/assets/images/tablet/cupcake-cenoura-md.png">
+
+          <div class="card-footer">
+            <p class="title-product">Cenoura</p>
+            <div class="buttons">
+              <a href="./src/pages/carrinho.html" class="buttons">
+                <button class="buy-btn">Comprar</button>
+              </a>
+              <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow left">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <button class="arrow right">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </section>
+
+  <h3 class="title">Galeria de Fotos</h3>
+
+  <section class="gallery carousel">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-chocolate-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-doceleite-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-redvelvet-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-baunilha-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-pistache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-morango-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganacheWhite-sm.png">
+      </div>
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-chocolate-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-doceleite-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-redvelvet-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-baunilha-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-pistache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-morango-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganacheWhite-sm.png">
+      </div>
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-chocolate-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-doceleite-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-redvelvet-sm.png">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-baunilha-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-pistache-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-morango-sm.png">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/assets/images/mobile/cupcake-ganacheWhite-sm.png">
+      </div>
+      
+    </div>
+
+    <button class="arrow left" id="galleryPrev">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <button class="arrow right" id="galleryNext">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </section>
+
+  <footer>
+    Feito por Cleysson Santos
+  </footer>
+
+  <script src="./src/scripts/commons/header.js" defer></script>
+  <script src="./src/scripts/commons/carrossel.js" defer></script>
+  <script src="./src/scripts/commons/buttons.js" defer></script>
+</body>
+</html>

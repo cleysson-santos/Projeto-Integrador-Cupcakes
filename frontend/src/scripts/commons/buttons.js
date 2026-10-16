@@ -12,7 +12,7 @@ function getProductFromButton(button) {
     const product = button.closest('.card, .product-card');
     const title = product.querySelector('.title-product, h2').textContent.trim();
     const price = product.querySelector('.price, .bottom span')?.textContent.trim() || 'R$ 7,99';
-    const image = product.querySelector('img').getAttribute('src');
+    const image = product.querySelector('img').src;
 
     return { id: title.toLowerCase(), title, price, image };
 }

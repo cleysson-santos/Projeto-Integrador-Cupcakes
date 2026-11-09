@@ -1,10 +1,5 @@
--- =====================================================================
--- APP CAKE - Script de criação do banco de dados (MySQL 8+)
--- Como executar:  mysql -u root -p < sql/schema.sql
--- (ou abra este arquivo no MySQL Workbench e clique em "Execute")
--- =====================================================================
 
--- 1) Cria o banco com utf8mb4 (suporta acentos e emojis).
+--    Cria o banco com utf8mb4 (suporta acentos e emojis).
 --    A collation "unicode_ci" ignora maiúsculas/minúsculas e acentos nas
 --    comparações, então buscar "acucar" também acha "Açúcar".
 CREATE DATABASE IF NOT EXISTS appcake
@@ -13,12 +8,12 @@ CREATE DATABASE IF NOT EXISTS appcake
 
 USE appcake;
 
--- 2) Remove as tabelas antigas (filha primeiro, por causa da chave estrangeira).
+--    Remove as tabelas antigas (filha primeiro, por causa da chave estrangeira).
 --    Isso permite rodar o script várias vezes durante o desenvolvimento.
 DROP TABLE IF EXISTS imagem_produto;
 DROP TABLE IF EXISTS produto;
 
--- 3) Tabela PRODUTO: um registro por sabor de cupcake.
+--    Tabela PRODUTO: um registro por sabor de cupcake.
 CREATE TABLE produto (
   id          BIGINT        NOT NULL AUTO_INCREMENT,
   nome        VARCHAR(80)   NOT NULL,                 -- o sabor (é aqui que a pesquisa procura)
@@ -32,7 +27,7 @@ CREATE TABLE produto (
   UNIQUE KEY uk_produto_nome (nome)
 ) ENGINE=InnoDB;
 
--- 4) Tabela IMAGEM_PRODUTO: cada linha é uma imagem de um produto
+--    Tabela IMAGEM_PRODUTO: cada linha é uma imagem de um produto
 --    em um tamanho (MOBILE, TABLET ou DESKTOP).
 CREATE TABLE imagem_produto (
   id         BIGINT       NOT NULL AUTO_INCREMENT,
@@ -48,7 +43,7 @@ CREATE TABLE imagem_produto (
     ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- 5) Dados iniciais: os 9 sabores que aparecem no front-end.
+--    Dados iniciais: os 9 sabores que aparecem no front-end.
 --    ATENÇÃO: preços e descrições são EXEMPLOS. Ajuste para os valores reais.
 INSERT INTO produto (id, nome, descricao, preco, mais_pedido, ativo) VALUES
   (1, 'Chocolate',      'Massa de chocolate com cobertura cremosa de chocolate.',   8.50, TRUE,  TRUE),
@@ -61,7 +56,7 @@ INSERT INTO produto (id, nome, descricao, preco, mais_pedido, ativo) VALUES
   (8, 'Cenoura',        'Massa de cenoura com cobertura de brigadeiro.',            8.00, FALSE, TRUE),
   (9, 'Pistache',       'Massa com pistache e cobertura cremosa.',                 10.00, FALSE, TRUE);
 
--- 6) Imagens: dois tamanhos por sabor (mobile "-sm" e tablet "-md"),
+--    Imagens: dois tamanhos por sabor (mobile "-sm" e tablet "-md"),
 --    seguindo os nomes de arquivo usados no seu index.html.
 --    O tamanho DESKTOP existe no enum, mas não foi cadastrado porque não
 --    vi os nomes dos arquivos de desktop dos cupcakes. Adicione quando tiver.
@@ -85,7 +80,7 @@ INSERT INTO imagem_produto (produto_id, url, tipo) VALUES
   (9, '/src/assets/images/mobile/cupcake-pistache-sm.png',     'MOBILE'),
   (9, '/src/assets/images/tablet/cupcake-pistache-md.png',     'TABLET');
 
--- 7) Teste rápido: a mesma consulta que o Java vai fazer na pesquisa.
+--    Teste rápido: a mesma consulta que o Java vai fazer na pesquisa.
 --    Deve retornar "Chocolate" (e não "Ganache Branco").
 -- SELECT p.id, p.nome FROM produto p
 --  WHERE LOWER(p.nome) LIKE '%choc%' AND p.ativo = TRUE;

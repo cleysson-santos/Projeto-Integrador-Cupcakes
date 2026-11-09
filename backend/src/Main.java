@@ -21,12 +21,12 @@ import web.ProdutoHandler;
 public class Main {
 
     @SuppressWarnings("try") // a conexão de teste só precisa abrir e fechar
-    public static void main(String[] args) throws Exception {
+    static void main(String[] args) throws Exception {
 
         // Porta do servidor: variável de ambiente PORT, ou 8080 por padrão.
         int porta = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
 
-        // 1) Testa a conexão com o MySQL já na inicialização.
+        //    Testa a conexão com o MySQL na inicialização.
         //    Se falhar, o erro aparece AGORA (e não só na primeira busca).
         try (Connection teste = ConexaoFactory.obterConexao()) {
             System.out.println("[OK] Conectado ao MySQL.");
@@ -36,12 +36,12 @@ public class Main {
             return;
         }
 
-        // 2) Monta as camadas, cada uma recebendo a de baixo.
+        //    Monta as camadas, cada uma recebendo a de baixo.
         ProdutoDAO dao = new ProdutoDAOImpl();
         ProdutoService service = new ProdutoService(dao);
         ProdutoHandler handler = new ProdutoHandler(service);
 
-        // 3) Cria o servidor HTTP do JDK e liga a rota ao handler.
+        //    Cria o servidor HTTP do JDK e liga a rota ao handler.
         HttpServer servidor = HttpServer.create(new InetSocketAddress(porta), 0);
         servidor.createContext(ProdutoHandler.BASE, handler);
 

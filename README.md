@@ -82,23 +82,23 @@ Este projeto foi desenvolvido para praticar conceitos de desenvolvimento Front-e
 
 ### Home
 
-(/frontend/src/assets/images/preview-home-mobile.png)
+<img src="./frontend/src/assets/images/mobile/preview-home-mobile.png" alt="Tela Home" width="260">
 
 ### Galeria
 
-(/frontend/src/assets/images/preview-gallery-mobile.png)
+<img src="./frontend/src/assets/images/mobile/preview-mobile.png" alt="Tela Galeria" width="260">
 
 ### Cardápio
 
-(/frontend/src/assets/images/preview-menu-mobile.png)
+<img src="./frontend/src/assets/images/mobile/preview-menu-mobile.png" alt="Tela Cardápio" width="260">
 
 ### Carrinho
 
-(/frontend/src/assets/images/preview-cart-mobile.png)
+<img src="./frontend/src/assets/images/mobile/preview-kart-mobile.png" alt="Tela Carrinho" width="260">
 
 ### Finalizar Pedido
 
-(/frontend/src/assets/images/preview-finish-mobile.png)
+<img src="./frontend/src/assets/images/mobile/preview-finish-mobile.png" alt="Tela Finalizar Pedido" width="260">
 
 ## 🔗 Demonstração
 
